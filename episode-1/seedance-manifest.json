@@ -1,0 +1,89 @@
+{
+  "episode": "Episode 1 — Downtown Demolition (T-Rex vs Spinosaurus)",
+  "model": "seedance_2_0",
+  "settings": {
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "mode": "std",
+    "duration_seconds": 5,
+    "genre": "epic",
+    "generate_audio": false,
+    "bitrate_mode": "standard"
+  },
+  "reference_stills": {
+    "TREX_REF": {
+      "id": "2a6c7b99-c302-4b57-9b28-f5dd4e234408",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_075839_2a6c7b99-c302-4b57-9b28-f5dd4e234408.png"
+    },
+    "SPINO_REF": {
+      "id": "44d098c1-e9aa-41a3-bae5-a56a79f23f06",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_075841_44d098c1-e9aa-41a3-bae5-a56a79f23f06.png"
+    }
+  },
+  "clips": [
+    {
+      "id": "V1",
+      "shot": "T-Rex erupts up through the neon street (entrance)",
+      "refs": ["TREX_REF"],
+      "job_id": "7785db68-3542-4dc4-8b12-358597f270b0",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_080540_7785db68-3542-4dc4-8b12-358597f270b0.mp4"
+    },
+    {
+      "id": "V2",
+      "shot": "Spino smashes head-first through a skyscraper (entrance)",
+      "refs": ["SPINO_REF"],
+      "job_id": "d1370753-f497-4007-b086-a15616b9d593",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090548_d1370753-f497-4007-b086-a15616b9d593.mp4"
+    },
+    {
+      "id": "V3",
+      "shot": "The two face off across a flooded neon street (staredown)",
+      "refs": ["TREX_REF", "SPINO_REF"],
+      "job_id": "456b47f2-e8bb-45f6-936d-8f60af7c35c1",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090609_456b47f2-e8bb-45f6-936d-8f60af7c35c1.mp4"
+    },
+    {
+      "id": "V4",
+      "shot": "T-Rex charges and slams Spino through an office building",
+      "refs": ["TREX_REF", "SPINO_REF"],
+      "job_id": "2e01a4f7-c8de-4b0d-a7a9-3d7cabb77068",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090612_2e01a4f7-c8de-4b0d-a7a9-3d7cabb77068.mp4"
+    },
+    {
+      "id": "V5",
+      "shot": "Spino tail-swipes a row of cars and a bus into T-Rex",
+      "refs": ["SPINO_REF", "TREX_REF"],
+      "job_id": "1c2f6dc6-3a61-4736-981a-1e5433f36ca0",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090933_1c2f6dc6-3a61-4736-981a-1e5433f36ca0.mp4"
+    },
+    {
+      "id": "V6",
+      "shot": "Spino pins T-Rex against a skyscraper, jaws snapping",
+      "refs": ["SPINO_REF", "TREX_REF"],
+      "job_id": "33a5b723-e406-44e3-b37d-f31cb3613c87",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090935_33a5b723-e406-44e3-b37d-f31cb3613c87.mp4"
+    },
+    {
+      "id": "V7",
+      "shot": "T-Rex drives Spino backward through a giant neon billboard",
+      "refs": ["TREX_REF", "SPINO_REF"],
+      "job_id": "30ce93ec-5fc5-4d85-8214-1da9535f8648",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090939_30ce93ec-5fc5-4d85-8214-1da9535f8648.mp4"
+    },
+    {
+      "id": "V8",
+      "shot": "FINISHER — slow-mo neck clamp and slam, pavement craters",
+      "refs": ["TREX_REF", "SPINO_REF"],
+      "job_id": "66553dcb-b447-41e3-accc-79656559bfc3",
+      "status": "completed",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_091158_66553dcb-b447-41e3-accc-79656559bfc3.mp4"
+    }
+  ]
+}
