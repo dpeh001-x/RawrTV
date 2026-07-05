@@ -69,8 +69,26 @@ That way Claude Code adapts the payload/response keys to your exact API on the f
 ---
 
 ## COST / SAFETY
-- 8 clips × a few retries on the ⭐ hero shots (V1/V4/V7/V8) — budget accordingly; `lite` model on the non-hero clips keeps it cheap.
+- **You need Higgsfield credits on the account.** With a valid key but an empty balance the API returns `403 {"detail":"Not enough credits"}` and nothing generates. Top up at [cloud.higgsfield.ai](https://cloud.higgsfield.ai/) first (~250–350 credits per fully-loaded episode).
+- 8 clips × a few retries on the ⭐ hero shots (V1/V4/V7/V8) — budget accordingly; the `dop-lite` model on the non-hero clips keeps it cheap.
 - Start with `--dry-run` to confirm the payload, then `--only V1` to confirm your endpoint/auth works before spending on all 8.
-- Keep your API key in env vars only — never commit it.
+- Keep your API key **and secret** in env vars only — never commit them.
+
+### Verified API contract (official Higgsfield Cloud)
+Confirmed live against the service, so the script's defaults already match:
+```
+POST https://platform.higgsfield.ai/v1/image2video/dop
+Authorization: Key KEY_ID:KEY_SECRET
+Content-Type: application/json
+
+{"params": {
+   "prompt": "<character-locked prompt>",
+   "model":  "dop-turbo" | "dop-lite" | "dop-preview",
+   "input_images": [{"type": "image_url", "image_url": "https://.../hero.png"}]
+}}
+```
+`input_images` is required (this is an image-to-video model). The success-response
+shape (job id + status URL) still needs confirming on the first funded run — the
+script prints the raw response if it can't find them so you can adjust.
 
 *RAWR FIGHTS · RESULTS ARE REAL ✓*

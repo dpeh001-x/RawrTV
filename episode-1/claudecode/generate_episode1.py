@@ -27,8 +27,8 @@ API_BASE      = os.environ.get("HF_API_BASE", "https://platform.higgsfield.ai") 
 SUBMIT_PATH   = os.environ.get("HF_SUBMIT_PATH", "/v1/image2video/dop")           # confirmed DoP image-to-video route
 AUTH_HEADER   = os.environ.get("HF_AUTH_HEADER", "Authorization")                # gateways may use 'Ocp-Apim-Subscription-Key'
 AUTH_PREFIX   = os.environ.get("HF_AUTH_PREFIX", "Key ")                          # official = 'Key ' + 'KEY_ID:KEY_SECRET' (gateways often use 'Bearer ')
-MODEL_HERO    = os.environ.get("HF_MODEL_HERO", "turbo")   # DoP model for the ⭐ hero shots (V1,V4,V7,V8)
-MODEL_STD     = os.environ.get("HF_MODEL_STD",  "lite")    # cheaper model for the rest
+MODEL_HERO    = os.environ.get("HF_MODEL_HERO", "dop-turbo")  # DoP model for the ⭐ hero shots (enum: dop-lite|dop-preview|dop-turbo)
+MODEL_STD     = os.environ.get("HF_MODEL_STD",  "dop-lite")   # cheaper DoP model for the rest
 REF_FIELD     = os.environ.get("HF_REF_FIELD", "input_images")  # official field name (some gateways use 'reference_image_urls')
 CLIP_SECONDS  = int(os.environ.get("HF_SECONDS", "5"))
 
@@ -101,25 +101,35 @@ def _get(url):
         return json.loads(r.read())
 
 def build_body(clip):
-    """Assemble the submit payload for a clip (pure — no network I/O, no cost)."""
+    """Assemble the submit payload for a clip (pure — no network I/O, no cost).
+
+    Verified schema for the official Higgsfield DoP image2video endpoint:
+        {"params": {"prompt": str,
+                    "model": "dop-lite"|"dop-preview"|"dop-turbo",
+                    "input_images": [{"type": "image_url", "image_url": <url>}, ...]}}
+    input_images is REQUIRED — this is an image-to-video model, so every clip
+    needs at least one reference still. Unknown extra params are ignored by the
+    API, so consistency is carried by the reference images (Soul mode), not seed.
+    """
     refs = [u for u in clip["refs"] if u]           # drop empties
-    body = {
-        "model": MODEL_HERO if clip["hero"] else MODEL_STD,
+    params = {
         "prompt": clip["prompt"],
-        "seed": clip["seed"],
-        "seconds": CLIP_SECONDS,
-        "enhance_prompt": True,
+        "model": MODEL_HERO if clip["hero"] else MODEL_STD,
+        REF_FIELD: [{"type": "image_url", "image_url": u} for u in refs],
     }
-    # Soul mode = reference images for character consistency.
-    if refs:
-        body[REF_FIELD] = refs   # <-- some APIs call this "input_images"
-    return body
+    if clip.get("seed") is not None:
+        params["seed"] = clip["seed"]   # accepted-or-ignored; harmless if unsupported
+    return {"params": params}
 
 def submit(clip):
     resp = _post(SUBMIT_PATH, build_body(clip))
-    # response shape varies: grab an id + a polling url however your API returns them
-    rid = resp.get("request_id") or resp.get("id")
-    poll = resp.get("polling_url") or resp.get("status_url") or f"{API_BASE}/v1/requests/status/{rid}"
+    # NOTE: the SUCCESS response shape (job id + status/poll url) was not yet
+    # observable — the test account has no credits, so no job has completed.
+    # These getters are best-effort; confirm the keys on the first funded run
+    # (print `resp` if id/poll come back None) and adjust here if needed.
+    rid = resp.get("id") or resp.get("request_id") or resp.get("job_id")
+    poll = (resp.get("polling_url") or resp.get("status_url")
+            or (f"{API_BASE}/v1/job-sets/{rid}" if rid else None))
     return rid, poll
 
 def poll(url, every=6, timeout=900):
@@ -148,8 +158,9 @@ def dry_run(clips):
     preview = []
     for clip in clips:
         body = build_body(clip)
-        n_refs = len(body.get(REF_FIELD, []))
-        print(f"▶ {clip['id']}  model={body['model']:<6} seed={body['seed']}  refs={n_refs}  seconds={body['seconds']}")
+        params = body["params"]
+        n_refs = len(params.get(REF_FIELD, []))
+        print(f"▶ {clip['id']}  model={params['model']:<10} seed={params.get('seed')}  refs={n_refs}")
         print(f"    prompt: {clip['prompt'][:110]}…")
         preview.append({"id": clip["id"], "endpoint": API_BASE + SUBMIT_PATH, "body": body})
     (OUT / "dry_run_preview.json").write_text(json.dumps(preview, indent=2))
@@ -171,14 +182,19 @@ def dry_run(clips):
 def run(clips):
     if not API_KEY:
         sys.exit("❌ Set HIGGSFIELD_API_KEY (see README). Or preview safely with: --dry-run")
+    if AUTH_PREFIX.strip() == "Key" and ":" not in (API_KEY or ""):
+        sys.exit("❌ Official Higgsfield auth needs KEY_ID:KEY_SECRET — set HIGGSFIELD_API_SECRET too (see README).")
+    # image2video REQUIRES a source image per clip; without refs there is nothing to animate.
     if not (TREX_REF and SPINO_REF):
-        print("⚠️  No reference image URLs set — clips will be less consistent.")
-        print("    Set TREX_REF_URL and SPINO_REF_URL to your two hero stills (see README).\n")
+        sys.exit("❌ TREX_REF_URL / SPINO_REF_URL are required — image2video needs a reference still per clip.\n"
+                 "   Host your two hero stills publicly and export their URLs (see README). Preview with --dry-run.")
 
     manifest = []
     for clip in clips:
         print(f"▶ {clip['id']} — submitting…")
         try:
+            if not build_body(clip)["params"][REF_FIELD]:
+                raise RuntimeError("no reference image URL available for this clip")
             rid, poll_url = submit(clip)
             print(f"    id={rid}")
             media = poll(poll_url)
