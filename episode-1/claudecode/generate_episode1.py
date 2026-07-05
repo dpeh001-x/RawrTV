@@ -23,15 +23,22 @@ import os, time, json, sys, pathlib, urllib.request, argparse
 # WaveSpeed, 302.AI, VideoGenAPI). Open your dashboard's API docs and confirm
 # the values below. Everything else in this script is provider-agnostic.
 # ============================================================
-API_BASE      = os.environ.get("HF_API_BASE", "https://cloud.higgsfield.ai")  # <-- confirm
-SUBMIT_PATH   = os.environ.get("HF_SUBMIT_PATH", "/v1/image2video")           # <-- confirm
-AUTH_HEADER   = os.environ.get("HF_AUTH_HEADER", "Authorization")             # some use 'Ocp-Apim-Subscription-Key'
-AUTH_PREFIX   = os.environ.get("HF_AUTH_PREFIX", "Bearer ")                    # gateways sometimes use "" (no prefix)
-MODEL_HERO    = os.environ.get("HF_MODEL_HERO", "turbo")   # model for the ⭐ hero shots (V1,V4,V7,V8)
+API_BASE      = os.environ.get("HF_API_BASE", "https://platform.higgsfield.ai")  # confirmed official API host
+SUBMIT_PATH   = os.environ.get("HF_SUBMIT_PATH", "/v1/image2video/dop")           # confirmed DoP image-to-video route
+AUTH_HEADER   = os.environ.get("HF_AUTH_HEADER", "Authorization")                # gateways may use 'Ocp-Apim-Subscription-Key'
+AUTH_PREFIX   = os.environ.get("HF_AUTH_PREFIX", "Key ")                          # official = 'Key ' + 'KEY_ID:KEY_SECRET' (gateways often use 'Bearer ')
+MODEL_HERO    = os.environ.get("HF_MODEL_HERO", "turbo")   # DoP model for the ⭐ hero shots (V1,V4,V7,V8)
 MODEL_STD     = os.environ.get("HF_MODEL_STD",  "lite")    # cheaper model for the rest
-REF_FIELD     = os.environ.get("HF_REF_FIELD", "reference_image_urls")  # some APIs use "input_images"
+REF_FIELD     = os.environ.get("HF_REF_FIELD", "input_images")  # official field name (some gateways use 'reference_image_urls')
 CLIP_SECONDS  = int(os.environ.get("HF_SECONDS", "5"))
+
+# Official Higgsfield auth is  Authorization: Key KEY_ID:KEY_SECRET  — it needs
+# BOTH halves. Provide them either as HIGGSFIELD_API_KEY="keyid:keysecret", or
+# split across HIGGSFIELD_API_KEY + HIGGSFIELD_API_SECRET and we join them here.
 API_KEY       = os.environ.get("HIGGSFIELD_API_KEY")
+API_SECRET    = os.environ.get("HIGGSFIELD_API_SECRET") or os.environ.get("HF_API_SECRET")
+if API_KEY and API_SECRET and ":" not in API_KEY:
+    API_KEY = f"{API_KEY}:{API_SECRET}"
 
 # Your two approved hero-still URLs (see README — these MUST be public URLs).
 TREX_REF  = os.environ.get("TREX_REF_URL",  "")   # e.g. https://.../trex_ref.png
@@ -151,6 +158,9 @@ def dry_run(clips):
     print(f"   Auth header : {AUTH_HEADER}: {AUTH_PREFIX}<key>")
     print(f"   Ref field   : {REF_FIELD}")
     print(f"   API key set : {'yes' if API_KEY else 'NO — export HIGGSFIELD_API_KEY'}")
+    if API_KEY and AUTH_PREFIX.strip() == "Key" and ":" not in API_KEY:
+        print("\n⚠️  Your key has no ':' — official Higgsfield auth needs KEY_ID:KEY_SECRET.")
+        print("    Add the secret: export HIGGSFIELD_API_SECRET=... (or set HIGGSFIELD_API_KEY='id:secret').")
     if not (TREX_REF and SPINO_REF):
         print("\n⚠️  TREX_REF_URL / SPINO_REF_URL not set — clips will lose Soul-mode consistency.")
     print("\nWhen this looks right, drop --dry-run to actually generate.")

@@ -9,17 +9,16 @@ Claude Code runs locally — it has full network access and your API key, so it 
 
 ## SETUP (5 minutes)
 
-### 1. Get your Higgsfield API key
-Log in to Higgsfield → find the **API / Developer** section (Higgsfield Cloud, or your gateway dashboard) → create an API key.
+### 1. Get your Higgsfield API key **and secret**
+Log in at **[cloud.higgsfield.ai](https://cloud.higgsfield.ai/)** → **[API Keys](https://cloud.higgsfield.ai/api-keys)** → create a key. The official Higgsfield API issues a **key id + secret pair** — you need **both halves**, not just the id. Copy the secret when it's shown (usually only once).
 
-### 2. ⚠️ Confirm 4 values from your API docs
-The exact endpoint differs between the official Higgsfield Cloud API and gateways (Segmind / WaveSpeed / 302.AI / VideoGenAPI). Open your dashboard's API docs and check these, then set any that differ as env vars:
-- **HF_API_BASE** — base URL (e.g. `https://cloud.higgsfield.ai`)
-- **HF_SUBMIT_PATH** — the image-to-video submit path (e.g. `/v1/image2video`)
-- **HF_AUTH_HEADER** — usually `Authorization`; some gateways use `Ocp-Apim-Subscription-Key`
-- **HF_AUTH_PREFIX** — usually `Bearer ` (with the space); some use empty `""`
-
-Also confirm the **model names** (`HF_MODEL_HERO`, `HF_MODEL_STD`) and the reference-image field name — this script uses `reference_image_urls`; some APIs call it `input_images`. If yours differs, tell Claude Code "change reference_image_urls to <name>" and it'll edit the script.
+### 2. Endpoint/auth defaults (already set to the official API)
+These defaults are verified against the official Higgsfield Cloud API — you only need to override them if you use a gateway (Segmind / WaveSpeed / 302.AI / VideoGenAPI):
+- **HF_API_BASE** — `https://platform.higgsfield.ai` (the official API host; `cloud.higgsfield.ai` is just the web dashboard)
+- **HF_SUBMIT_PATH** — `/v1/image2video/dop`
+- **HF_AUTH_HEADER** — `Authorization` (some gateways use `Ocp-Apim-Subscription-Key`)
+- **HF_AUTH_PREFIX** — `Key ` → the header becomes `Authorization: Key KEY_ID:KEY_SECRET` (gateways often use `Bearer ` instead)
+- reference-image field — `input_images` (some gateways call it `reference_image_urls`; override with `HF_REF_FIELD`)
 
 ### 3. Make your 2 hero stills, and host them
 Generate one clean full-body still of each dino in Higgsfield (prompts below), approve them, then **upload them somewhere public** so the API can fetch them by URL (an S3/Cloudflare R2 bucket, imgur, or any image host). Most video APIs need image **URLs**, not local files.
@@ -30,11 +29,15 @@ Hero still prompts:
 
 ### 4. Set env vars
 ```bash
-export HIGGSFIELD_API_KEY="sk-..."
+# Official Higgsfield auth needs BOTH the key id and the secret:
+export HIGGSFIELD_API_KEY="your-key-id"
+export HIGGSFIELD_API_SECRET="your-key-secret"     # the script joins them as KEY_ID:KEY_SECRET
+# (or provide the pair in one var: export HIGGSFIELD_API_KEY="keyid:keysecret")
+
 export TREX_REF_URL="https://your-host/trex_ref.png"
 export SPINO_REF_URL="https://your-host/spino_ref.png"
-# only if your docs differ from defaults:
-# export HF_API_BASE="..."; export HF_SUBMIT_PATH="..."; export HF_AUTH_HEADER="..."; export HF_AUTH_PREFIX=""
+# only if you use a gateway whose docs differ from the official defaults:
+# export HF_API_BASE="..."; export HF_SUBMIT_PATH="..."; export HF_AUTH_HEADER="..."; export HF_AUTH_PREFIX="Bearer "
 ```
 
 ---
