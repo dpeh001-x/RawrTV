@@ -24,6 +24,11 @@
       "id": "636d0b9c-0191-45d7-a6bf-c4c99b0b3a03",
       "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/636d0b9c-0191-45d7-a6bf-c4c99b0b3a03.png",
       "note": "final frame of V6 (pin), used as start_image for V6ext"
+    },
+    "V14_last_frame": {
+      "id": "50b43541-39f0-41e1-a88c-a75a549ee936",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/50b43541-39f0-41e1-a88c-a75a549ee936.png",
+      "note": "final frame of V14 (near-fatal pin), used as start_image for V14ext"
     }
   },
   "active": [
@@ -42,7 +47,8 @@
     { "id": "V11",  "rev": "new",      "shot": "Roaring clash, burning skyline + lightning",        "refs": ["TREX_REF","SPINO_REF"], "job_id": "7e77261e-9514-4094-86c6-fe83d015b34d", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_095234_7e77261e-9514-4094-86c6-fe83d015b34d.mp4" },
     { "id": "V12",  "rev": "new",      "shot": "Spino rises from a battered position (debris streaming off, no water)", "refs": ["SPINO_REF","TREX_REF"], "job_id": "74370824-ad9f-4829-9683-418fab1490fc", "duration": 5, "mode": "fast", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_105545_74370824-ad9f-4829-9683-418fab1490fc.mp4" },
     { "id": "V13",  "rev": "new",      "shot": "Spino charges + devastating finisher on T-Rex",     "refs": ["SPINO_REF","TREX_REF"], "job_id": "e54ccc78-1b3e-414b-959f-ef9fa8dbb18c", "duration": 5, "mode": "fast", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_105521_e54ccc78-1b3e-414b-959f-ef9fa8dbb18c.mp4" },
-    { "id": "V14",  "rev": "new",      "shot": "Spino deadly near-fatal throat clamp on T-Rex",     "refs": ["SPINO_REF","TREX_REF"], "job_id": "37da26ce-f285-44cb-bcfc-327c4daedfbc", "duration": 5, "mode": "fast", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_105528_37da26ce-f285-44cb-bcfc-327c4daedfbc.mp4" }
+    { "id": "V14",  "rev": "new",      "shot": "Spino deadly near-fatal throat clamp on T-Rex",     "refs": ["SPINO_REF","TREX_REF"], "job_id": "37da26ce-f285-44cb-bcfc-327c4daedfbc", "duration": 5, "mode": "fast", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_105528_37da26ce-f285-44cb-bcfc-327c4daedfbc.mp4" },
+    { "id": "V14ext","rev": "ext",     "shot": "T-Rex breaks free and stands roaring upward (continues from V14 last frame)", "refs": ["TREX_REF","SPINO_REF"], "start_image": "50b43541-39f0-41e1-a88c-a75a549ee936", "job_id": "77171c7b-80b8-4b76-8635-da1169aca07b", "duration": 5, "mode": "fast", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_110118_77171c7b-80b8-4b76-8635-da1169aca07b.mp4" }
   ],
   "archive": [
     { "id": "V1",  "rev": "orig", "shot": "T-Rex erupts up through the street (entrance)",  "job_id": "7785db68-3542-4dc4-8b12-358597f270b0", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_080540_7785db68-3542-4dc4-8b12-358597f270b0.mp4", "superseded_by": "V1 r2" },
