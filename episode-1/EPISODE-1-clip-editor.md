@@ -7,7 +7,8 @@ flag what you want changed, export the spec, paste it back to Claude to execute.
 
 ## 1. THE PICKER — `clip-picker.html`
 Open **`episode-1/clip-picker.html`** in a browser (Chrome / Safari / Firefox).
-It plays all 8 clips (streamed from Higgsfield's CDN) and gives each one four choices:
+It has two sections — **Active lineup** and **🗄️ Archive** (superseded takes) — and
+plays every clip streamed from Higgsfield's CDN. Each active clip gets four choices:
 
 | Flag | Meaning |
 |------|---------|
@@ -18,6 +19,14 @@ It plays all 8 clips (streamed from Higgsfield's CDN) and gives each one four ch
 
 Add per-clip **notes**, an optional **duration** (4–15s), and an optional **full
 prompt override**, then click **Generate edit spec** → **Copy** and paste the JSON to Claude.
+
+**Archive** — every card has a **🗄️ Send to archive** button (and archived cards a
+**↺ Restore to active** button) so you can shelve a take without losing it. Archived
+clips keep playing but drop out of the edit spec. Superseded takes ship pre-archived.
+
+**Download selector** — tick the **◻ get** box on any clips (active or archived), then
+**Download selected**. It tries a direct cross-origin download first and falls back to a
+**curl script** / **Copy URLs** / **open-all-in-tabs** if the browser blocks the save.
 
 ---
 
