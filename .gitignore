@@ -1,0 +1,14 @@
+# Generated video output + manifests (never commit rendered clips or previews)
+output/
+episode-1/claudecode/output/
+*.mp4
+
+# Secrets — never commit API keys or env files
+.env
+.env.*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

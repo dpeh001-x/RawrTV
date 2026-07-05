@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAWR MATERIAL — Brand Board</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=VT323&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0A0A0A;
+    --red:#FF2A1F;
+    --red-deep:#C1160D;
+    --bone:#F2EFE6;
+    --yellow:#FFD400;
+    --cyan:#00E5FF;
+    --magenta:#FF00C8;
+    --grid:#1C1B19;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--black);
+    color:var(--bone);
+    font-family:'Space Grotesk',sans-serif;
+    overflow-x:hidden;
+    position:relative;
+  }
+  /* ---- VHS grain + scanlines over everything ---- */
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px);
+    pointer-events:none;z-index:900;
+  }
+  body::after{
+    content:"";
+    position:fixed;inset:-50%;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity:0.05;
+    pointer-events:none;z-index:901;
+    animation:grain 0.4s steps(3) infinite;
+  }
+  @keyframes grain{
+    0%{transform:translate(0,0)}
+    33%{transform:translate(-2%,1%)}
+    66%{transform:translate(1%,-2%)}
+    100%{transform:translate(0,0)}
+  }
+  @media (prefers-reduced-motion: reduce){
+    body::after{animation:none}
+    *{animation:none!important;transition:none!important}
+  }
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* ---- OSD utility text ---- */
+  .osd{
+    font-family:'VT323',monospace;
+    color:var(--bone);
+    font-size:1.05rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    opacity:0.85;
+  }
+  .osd .rec{color:var(--red)}
+  .rec-dot{display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;animation:blink 1s steps(1) infinite;vertical-align:baseline;margin-right:6px}
+  @keyframes blink{50%{opacity:0}}
+
+  /* ================= HERO / LOGO ================= */
+  .hero{
+    min-height:88vh;
+    display:flex;flex-direction:column;justify-content:center;
+    position:relative;
+    border-bottom:4px solid var(--red);
+  }
+  .hero-osd-top{
+    display:flex;justify-content:space-between;
+    padding:22px 4px 0;
+  }
+  .logo-lockup{
+    text-align:center;
+    padding:40px 0 30px;
+    user-select:none;
+  }
+  .logo-rawr{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(4.5rem, 19vw, 13.5rem);
+    line-height:0.85;
+    letter-spacing:0.01em;
+    color:var(--red);
+    position:relative;
+    display:inline-block;
+    /* bite mark: chunk clipped from top-right */
+    clip-path:polygon(0 0, 78% 0, 80% 9%, 85% 4%, 88% 13%, 94% 7%, 96% 16%, 100% 12%, 100% 100%, 0 100%);
+    text-shadow:
+      3px 0 0 rgba(255,0,200,0.45),
+      -3px 0 0 rgba(0,229,255,0.45);
+    animation:track 6s infinite;
+  }
+  @keyframes track{
+    0%,92%,100%{transform:translateX(0);filter:none}
+    93%{transform:translateX(-6px) skewX(-4deg);filter:brightness(1.4)}
+    94%{transform:translateX(5px) skewX(3deg)}
+    95%{transform:translateX(-2px)}
+    96%{transform:translateX(0)}
+  }
+  .logo-facts{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(1.5rem, 5.4vw, 4rem);
+    letter-spacing:0.24em;
+    margin-left:0.24em; /* optical fix for tracking */
+    color:var(--bone);
+    line-height:1.1;
+    margin-top:10px;
+  }
+  .vs-badge{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(1.4rem,4vw,2.2rem);
+    margin-top:14px;
+    letter-spacing:0.05em;
+  }
+  .vs-badge span{
+    color:var(--red);
+    border:3px solid var(--red);
+    padding:2px 14px;
+    margin:0 10px;
+    transform:skewX(-8deg);
+    display:inline-block;
+    text-shadow:2px 0 0 rgba(0,229,255,0.5),-2px 0 0 rgba(255,0,200,0.5);
+  }
+  .logo-tag{
+    font-family:'VT323',monospace;
+    font-size:clamp(1.1rem,3vw,1.6rem);
+    color:var(--yellow);
+    margin-top:16px;
+    letter-spacing:0.12em;
+  }
+  .hero-osd-bottom{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    padding:0 4px 26px;
+  }
+
+  /* ================= SECTIONS ================= */
+  section{padding:72px 0;border-bottom:1px solid var(--grid)}
+  .sec-label{
+    font-family:'VT323',monospace;
+    color:var(--red);
+    font-size:1.2rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  h2{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(1.9rem,5vw,3rem);
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    margin-bottom:34px;
+    color:var(--bone);
+  }
+  h2 em{color:var(--red);font-style:normal}
+  p.lede{max-width:620px;color:#B9B4A7;line-height:1.65;margin:-18px 0 34px;font-size:1.02rem}
+
+  /* ---- palette ---- */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .swatch{
+    border:2px solid var(--grid);
+    height:170px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:12px;
+    position:relative;
+  }
+  .swatch .name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1rem;letter-spacing:0.05em}
+  .swatch .hex{font-family:'VT323',monospace;font-size:1.05rem;opacity:0.85}
+  .sw-black{background:var(--black)}
+  .sw-red{background:var(--red);color:var(--black)}
+  .sw-bone{background:var(--bone);color:var(--black)}
+  .sw-yellow{background:var(--yellow);color:var(--black)}
+  .sw-glitch{background:linear-gradient(105deg,var(--cyan) 0 49.6%,var(--magenta) 50.4% 100%);color:var(--black)}
+  .swatch .use{font-family:'VT323',monospace;font-size:0.95rem;position:absolute;top:10px;left:12px;opacity:0.75;text-transform:uppercase;letter-spacing:0.06em}
+
+  /* ---- type ---- */
+  .type-rows{display:flex;flex-direction:column;gap:26px}
+  .type-row{border-left:4px solid var(--red);padding-left:18px}
+  .type-row .role{font-family:'VT323',monospace;color:var(--yellow);letter-spacing:0.15em;font-size:1rem;text-transform:uppercase}
+  .t-display{font-family:'Anton',sans-serif;font-size:clamp(2rem,6vw,3.4rem);text-transform:uppercase;line-height:1.05}
+  .t-osd{font-family:'VT323',monospace;font-size:clamp(1.3rem,4vw,2rem)}
+  .t-body{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;max-width:560px;line-height:1.6}
+
+  /* ---- thumbnails ---- */
+  .thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .thumb{
+    aspect-ratio:9/16;
+    border:3px solid var(--grid);
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse at 50% 70%, #2A1512 0%, var(--black) 70%);
+    display:flex;flex-direction:column;
+  }
+  .thumb:hover{border-color:var(--red)}
+  .thumb .t-osd-bar{
+    display:flex;justify-content:space-between;
+    padding:10px 12px;
+    font-family:'VT323',monospace;font-size:0.95rem;
+  }
+  .thumb .dino{
+    flex:1;display:flex;align-items:center;justify-content:center;
+    font-size:clamp(4rem,10vw,6rem);
+    filter:drop-shadow(0 0 24px rgba(255,42,31,0.5)) saturate(0.7) contrast(1.2);
+  }
+  .thumb .headline{
+    font-family:'Anton',sans-serif;
+    text-transform:uppercase;
+    font-size:clamp(1.35rem,3.4vw,1.8rem);
+    line-height:0.98;
+    padding:0 14px 8px;
+    color:var(--bone);
+  }
+  .thumb .headline .hot{
+    color:var(--red);
+    text-shadow:2px 0 0 rgba(255,0,200,0.4),-2px 0 0 rgba(0,229,255,0.4);
+  }
+  .thumb .kicker{
+    font-family:'VT323',monospace;
+    color:var(--yellow);
+    padding:0 14px 16px;
+    font-size:1rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  .stamp{
+    position:absolute;right:10px;bottom:84px;
+    font-family:'Anton',sans-serif;
+    font-size:0.8rem;letter-spacing:0.1em;
+    color:var(--yellow);
+    border:3px solid var(--yellow);
+    padding:5px 9px;
+    transform:rotate(-9deg);
+    text-transform:uppercase;
+    background:rgba(10,10,10,0.65);
+  }
+  .thumb-note{font-family:'VT323',monospace;color:#8f897c;margin-top:10px;font-size:1rem;letter-spacing:0.05em}
+
+  /* ---- intro sting storyboard ---- */
+  .sting{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .frame{
+    border:2px solid var(--grid);
+    background:#0E0D0C;
+    padding:16px;
+    position:relative;
+  }
+  .frame .tc{
+    font-family:'VT323',monospace;
+    color:var(--red);
+    font-size:1.15rem;
+    letter-spacing:0.1em;
+  }
+  .frame .action{
+    font-family:'Anton',sans-serif;
+    text-transform:uppercase;
+    font-size:1.15rem;
+    margin:8px 0 10px;
+    line-height:1.15;
+  }
+  .frame .detail{color:#B9B4A7;font-size:0.95rem;line-height:1.55}
+  .frame .audio{
+    margin-top:12px;
+    font-family:'VT323',monospace;
+    color:var(--yellow);
+    font-size:0.98rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+  }
+
+  /* ---- voice ---- */
+  .voice{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .voice-card{border:2px solid var(--grid);padding:22px}
+  .voice-card.no{border-color:#3a1512}
+  .voice-card .vlabel{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px}
+  .voice-card.yes .vlabel{color:var(--yellow)}
+  .voice-card.no .vlabel{color:#7a4a45}
+  .voice-card ul{list-style:none}
+  .voice-card li{
+    padding:9px 0;border-top:1px dashed var(--grid);
+    color:#D8D3C6;line-height:1.5;font-size:0.98rem;
+  }
+  .voice-card li::before{content:"▸ ";color:var(--red)}
+  .voice-card.no li{color:#8f897c;text-decoration:line-through;text-decoration-color:rgba(255,42,31,0.5)}
+
+  footer{
+    padding:46px 0 70px;
+    text-align:center;
+  }
+  .footer-stamp{
+    display:inline-block;
+    font-family:'Anton',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--yellow);
+    border:4px solid var(--yellow);
+    padding:12px 22px;
+    transform:rotate(-4deg);
+    font-size:1.2rem;
+  }
+  .footer-moji{font-family:'VT323',monospace;color:#8f897c;margin-top:26px;letter-spacing:0.15em;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-osd-top osd">
+      <span><span class="rec-dot"></span><span class="rec">REC</span></span>
+      <span>SP 0:00:03</span>
+    </div>
+    <div class="logo-lockup">
+      <div class="logo-rawr">RAWR</div>
+      <div class="logo-facts">FIGHTS</div>
+      <div class="vs-badge">🦖 <span>VS</span> 🦖</div>
+      <div class="logo-tag">// TWO ENTER · SCIENCE DECIDES //</div>
+    </div>
+    <div class="hero-osd-bottom osd">
+      <span>RAWR FIGHTS &nbsp;·&nbsp; A MOJI STUDIOS CHANNEL</span>
+      <span>MAIN EVENT</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PALETTE ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">01 // palette</div>
+    <h2>Tape-damage <em>red</em> on tar black</h2>
+    <p class="lede">Two colors do 90% of the work. Yellow appears only on the RESULTS stamp so it always means "this stat is real." Cyan/magenta never appear as fills — only as glitch fringing on the logo and stat reveals.</p>
+    <div class="swatches">
+      <div class="swatch sw-black"><span class="use">Base</span><span class="name">Tar Black</span><span class="hex">#0A0A0A</span></div>
+      <div class="swatch sw-red"><span class="use">Brand / roar</span><span class="name">Bite Red</span><span class="hex">#FF2A1F</span></div>
+      <div class="swatch sw-bone"><span class="use">Text</span><span class="name">Fossil Bone</span><span class="hex">#F2EFE6</span></div>
+      <div class="swatch sw-yellow"><span class="use">Stamp only</span><span class="name">Certified Yellow</span><span class="hex">#FFD400</span></div>
+      <div class="swatch sw-glitch"><span class="use">Fringe only</span><span class="name">VHS Split</span><span class="hex">#00E5FF / #FF00C8</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TYPE ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">02 // type</div>
+    <h2>Three voices, one <em>attitude</em></h2>
+    <div class="type-rows">
+      <div class="type-row">
+        <div class="role">Display — Anton</div>
+        <div class="t-display">T-Rex could bite through a car</div>
+      </div>
+      <div class="type-row">
+        <div class="role">OSD / captions — VT323</div>
+        <div class="t-osd">▶ PLAY · FACT VERIFIED · SOURCE: NATURE, 2019</div>
+      </div>
+      <div class="type-row">
+        <div class="role">Body — Space Grotesk</div>
+        <div class="t-body">Body copy for descriptions, community posts, and pinned source comments. Readable, modern, stays out of the way of the loud stuff.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THUMBNAILS ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">03 // shorts thumbnail system</div>
+    <h2>One dino. One <em>disrespectful</em> claim.</h2>
+    <p class="lede">Fixed grid so the feed instantly recognizes you: LIVE bar top, the VS matchup center with red rim-light, Anton headline with VS in glitch-red, VT323 fight-name kicker, RESULTS stamp. Swap the fighters — never the structure.</p>
+    <div class="thumbs">
+      <div>
+        <div class="thumb">
+          <div class="t-osd-bar osd"><span><span class="rec-dot"></span>LIVE</span><span>FIGHT 01</span></div>
+          <div class="dino">🦖<span style="color:var(--red);font-family:'Anton';margin:0 6px">VS</span>🐊</div>
+          <div class="headline">T-REX <span class="hot">VS</span> SPINO</div>
+          <div class="kicker">// DOWNTOWN DEMOLITION //</div>
+          <div class="stamp">RESULTS ARE REAL ✓</div>
+        </div>
+        <div class="thumb-note">FIGHT 01 — THE MOVIE GOT IT BACKWARDS</div>
+      </div>
+      <div>
+        <div class="thumb">
+          <div class="t-osd-bar osd"><span><span class="rec-dot"></span>LIVE</span><span>FIGHT 02</span></div>
+          <div class="dino">🌊<span style="color:var(--red);font-family:'Anton';margin:0 6px">VS</span>🦈</div>
+          <div class="headline">MOSA <span class="hot">VS</span> MEG</div>
+          <div class="kicker">// HARBOR HAVOC //</div>
+          <div class="stamp">RESULTS ARE REAL ✓</div>
+        </div>
+        <div class="thumb-note">FIGHT 02 — APEX vs APEX</div>
+      </div>
+      <div>
+        <div class="thumb">
+          <div class="t-osd-bar osd"><span><span class="rec-dot"></span>LIVE</span><span>FIGHT 03</span></div>
+          <div class="dino">🛡️<span style="color:var(--red);font-family:'Anton';margin:0 6px">VS</span>🦖</div>
+          <div class="headline">ANKYLO <span class="hot">VS</span> T-REX</div>
+          <div class="kicker">// STREET TANK //</div>
+          <div class="stamp">RESULTS ARE REAL ✓</div>
+        </div>
+        <div class="thumb-note">FIGHT 03 — THE ARMORED UPSET</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTRO STING ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">04 // intro sting — 1.8 seconds</div>
+    <h2>The <em>roar drop</em></h2>
+    <p class="lede">Plays after the hook, never before it (Shorts punish slow opens). The phonk bass drop and the roar hit on the same frame — that sync IS the brand.</p>
+    <div class="sting">
+      <div class="frame">
+        <div class="tc">0.0s — 0.4s</div>
+        <div class="action">Static burst</div>
+        <div class="detail">Full-frame VHS static, one frame of the dino's eye hidden in the noise. Tracking lines roll upward.</div>
+        <div class="audio">♪ Tape hiss + rewind</div>
+      </div>
+      <div class="frame">
+        <div class="tc">0.4s — 0.9s</div>
+        <div class="action">RAWR slams in</div>
+        <div class="detail">Logo punches to center, oversized, cyan/magenta split at ±4px. Camera shake on impact frame.</div>
+        <div class="audio">♪ Phonk cowbell build</div>
+      </div>
+      <div class="frame">
+        <div class="tc">0.9s — 1.4s</div>
+        <div class="action">Bite + drop</div>
+        <div class="detail">Bite mark chomps out of the logo's corner. Bass drop and roar SFX hit on the exact bite frame.</div>
+        <div class="audio">♪ 808 DROP + ROAR</div>
+      </div>
+      <div class="frame">
+        <div class="tc">1.4s — 1.8s</div>
+        <div class="action">Cut to fact</div>
+        <div class="detail">Hard cut to first Higgsfield shot, OSD overlay fades in: REC ● + episode number. No fade — cut on the beat.</div>
+        <div class="audio">♪ Beat carries into VO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOICE ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">05 // voice</div>
+    <h2>Disrespectful, but <em>correct</em></h2>
+    <div class="voice">
+      <div class="voice-card yes">
+        <div class="vlabel">✓ We say</div>
+        <ul>
+          <li>"Bro evolved 60 knives for teeth and still went extinct. Couldn't be me."</li>
+          <li>"This is not a joke. This is peer-reviewed. Source pinned."</li>
+          <li>"Scientists nerfed Spinosaurus three times. He's in the patch notes."</li>
+          <li>"Jurassic Park lied to you and we have receipts."</li>
+        </ul>
+      </div>
+      <div class="voice-card no">
+        <div class="vlabel">✗ We never say</div>
+        <ul>
+          <li>"Welcome back to another video, don't forget to like and subscribe!"</li>
+          <li>Made-up facts for a better punchline</li>
+          <li>"Number 7 will SHOCK you"</li>
+          <li>Anything a template channel could post word-for-word</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-stamp">RESULTS ARE REAL ✓</div>
+  <div class="footer-moji">A MOJI STUDIOS PRODUCTION · EST. 65,000,000 BC</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+#!/usr/bin/env python3
+"""
+RAWR FIGHTS — Episode 1 generator (Higgsfield API)
+Generates all 8 clips for "Downtown Demolition" (T-Rex vs Spinosaurus),
+using reference images (Soul mode) so the dinosaur designs stay CONSISTENT.
+
+Run inside Claude Code:  python generate_episode1.py
+It will: submit each clip -> poll until done -> download V1..V8.mp4 into ./output/
+
+Handy flags (no API calls / no cost until you drop --dry-run):
+  python generate_episode1.py --dry-run        # print the exact payloads, spend nothing
+  python generate_episode1.py --only V1        # generate a single clip (README's "test V1 first")
+  python generate_episode1.py --only V1,V4,V7  # generate a subset
+  python generate_episode1.py --list           # list clip ids + one-line summaries
+"""
+
+import os, time, json, sys, pathlib, urllib.request, argparse
+
+# ============================================================
+# CONFIG  —  ⚠️ VERIFY THESE AGAINST YOUR LIVE HIGGSFIELD DOCS
+# The exact base URL / paths / model names / auth header differ depending on
+# whether you use the OFFICIAL Higgsfield Cloud API or a gateway (Segmind,
+# WaveSpeed, 302.AI, VideoGenAPI). Open your dashboard's API docs and confirm
+# the values below. Everything else in this script is provider-agnostic.
+# ============================================================
+API_BASE      = os.environ.get("HF_API_BASE", "https://cloud.higgsfield.ai")  # <-- confirm
+SUBMIT_PATH   = os.environ.get("HF_SUBMIT_PATH", "/v1/image2video")           # <-- confirm
+AUTH_HEADER   = os.environ.get("HF_AUTH_HEADER", "Authorization")             # some use 'Ocp-Apim-Subscription-Key'
+AUTH_PREFIX   = os.environ.get("HF_AUTH_PREFIX", "Bearer ")                    # gateways sometimes use "" (no prefix)
+MODEL_HERO    = os.environ.get("HF_MODEL_HERO", "turbo")   # model for the ⭐ hero shots (V1,V4,V7,V8)
+MODEL_STD     = os.environ.get("HF_MODEL_STD",  "lite")    # cheaper model for the rest
+REF_FIELD     = os.environ.get("HF_REF_FIELD", "reference_image_urls")  # some APIs use "input_images"
+CLIP_SECONDS  = int(os.environ.get("HF_SECONDS", "5"))
+API_KEY       = os.environ.get("HIGGSFIELD_API_KEY")
+
+# Your two approved hero-still URLs (see README — these MUST be public URLs).
+TREX_REF  = os.environ.get("TREX_REF_URL",  "")   # e.g. https://.../trex_ref.png
+SPINO_REF = os.environ.get("SPINO_REF_URL", "")
+
+# Fixed seeds per dino = extra consistency across clips.
+TREX_SEED, SPINO_SEED = 70111, 70222
+
+OUT = pathlib.Path("output"); OUT.mkdir(exist_ok=True)
+
+# ============================================================
+# CHARACTER-LOCKED PROMPTS  (identical design tokens every clip)
+# ============================================================
+TREX  = ("a Tyrannosaurus rex with dark olive-green scaly hide, a faded amber "
+         "underbelly, three deep parallel scars across its left shoulder, dull "
+         "burnt-orange eyes, heavy muscular build, weathered cracked skin texture")
+SPINO = ("a Spinosaurus with blue-grey hide and dark charcoal dorsal striping, a "
+         "tall red-and-black sail, a long narrow crocodilian snout, a pale cream "
+         "underbelly, lean athletic build")
+SCENE = ("night, rain-soaked neon-lit downtown city, kaiju scale towering over "
+         "skyscrapers, cars and buses in frame for scale, cinematic blockbuster "
+         "lighting, photorealistic, vertical 9:16, no text")
+
+CLIPS = [
+    dict(id="V1", hero=True,  refs=[TREX_REF],            seed=TREX_SEED,
+         prompt=f"{TREX} erupts up through a city street, cars and asphalt flung aside, spotlights and pyro flares, low hero angle, rain and steam. {SCENE}"),
+    dict(id="V2", hero=False, refs=[SPINO_REF],           seed=SPINO_SEED,
+         prompt=f"{SPINO} smashes head-first through a glass skyscraper, shards raining down, sail lit by neon and pyro, low hero angle. {SCENE}"),
+    dict(id="V3", hero=False, refs=[TREX_REF, SPINO_REF], seed=TREX_SEED,
+         prompt=f"{TREX} and {SPINO} face off across a flooded neon street, rain pouring, headlights and steam, tense standoff, low wide angle. {SCENE}"),
+    dict(id="V4", hero=True,  refs=[TREX_REF, SPINO_REF], seed=TREX_SEED,
+         prompt=f"{TREX} charges and slams {SPINO} through an office building, glass and concrete exploding outward, dust cloud, dynamic handheld. {SCENE}"),
+    dict(id="V5", hero=False, refs=[SPINO_REF, TREX_REF], seed=SPINO_SEED,
+         prompt=f"{SPINO} swings its long tail and knocks a row of cars and a bus into {TREX}, debris flying, neon reflections, motion blur. {SCENE}"),
+    dict(id="V6", hero=False, refs=[SPINO_REF, TREX_REF], seed=SPINO_SEED,
+         prompt=f"{SPINO} pins {TREX} against a skyscraper with its clawed forelimbs, snapping its long jaws, sparks and shattering windows, dramatic low angle. {SCENE}"),
+    dict(id="V7", hero=True,  refs=[TREX_REF, SPINO_REF], seed=TREX_SEED,
+         prompt=f"{TREX} drives {SPINO} backward through a giant neon billboard, sparks and electrical arcs bursting, rain, epic scale. {SCENE}"),
+    dict(id="V8", hero=True,  refs=[TREX_REF, SPINO_REF], seed=TREX_SEED,
+         prompt=f"slow-motion: {TREX} clamps its jaws onto the neck of {SPINO} and slams it onto the street, pavement cratering, dust blast, dramatic slow-mo. {SCENE}"),
+]
+
+# ============================================================
+# API HELPERS  (thin wrappers; adjust payload keys to match your docs)
+# ============================================================
+def _headers():
+    return {"Content-Type": "application/json",
+            AUTH_HEADER: f"{AUTH_PREFIX}{API_KEY}"}
+
+def _post(path, body):
+    req = urllib.request.Request(API_BASE + path,
+                                 data=json.dumps(body).encode(),
+                                 headers=_headers(), method="POST")
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.loads(r.read())
+
+def _get(url):
+    req = urllib.request.Request(url, headers=_headers(), method="GET")
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.loads(r.read())
+
+def build_body(clip):
+    """Assemble the submit payload for a clip (pure — no network I/O, no cost)."""
+    refs = [u for u in clip["refs"] if u]           # drop empties
+    body = {
+        "model": MODEL_HERO if clip["hero"] else MODEL_STD,
+        "prompt": clip["prompt"],
+        "seed": clip["seed"],
+        "seconds": CLIP_SECONDS,
+        "enhance_prompt": True,
+    }
+    # Soul mode = reference images for character consistency.
+    if refs:
+        body[REF_FIELD] = refs   # <-- some APIs call this "input_images"
+    return body
+
+def submit(clip):
+    resp = _post(SUBMIT_PATH, build_body(clip))
+    # response shape varies: grab an id + a polling url however your API returns them
+    rid = resp.get("request_id") or resp.get("id")
+    poll = resp.get("polling_url") or resp.get("status_url") or f"{API_BASE}/v1/requests/status/{rid}"
+    return rid, poll
+
+def poll(url, every=6, timeout=900):
+    t0 = time.time()
+    while time.time() - t0 < timeout:
+        d = _get(url)
+        st = (d.get("status") or "").upper()
+        if st in ("COMPLETED", "SUCCEEDED", "DONE"):
+            out = d.get("output", {})
+            urls = out.get("media_url") or out.get("media_urls") or [out.get("url")]
+            return urls[0]
+        if st in ("ERROR", "FAILED"):
+            raise RuntimeError(f"generation failed: {json.dumps(d)[:400]}")
+        print(f"    …{st or 'PENDING'} ({int(time.time()-t0)}s)")
+        time.sleep(every)
+    raise TimeoutError("timed out waiting for clip")
+
+def download(url, path):
+    urllib.request.urlretrieve(url, path)
+
+# ============================================================
+# DRY RUN  (validate payloads/prompts without any API call or cost)
+# ============================================================
+def dry_run(clips):
+    print("🧪 DRY RUN — no API calls, no cost. Previewing payloads:\n")
+    preview = []
+    for clip in clips:
+        body = build_body(clip)
+        n_refs = len(body.get(REF_FIELD, []))
+        print(f"▶ {clip['id']}  model={body['model']:<6} seed={body['seed']}  refs={n_refs}  seconds={body['seconds']}")
+        print(f"    prompt: {clip['prompt'][:110]}…")
+        preview.append({"id": clip["id"], "endpoint": API_BASE + SUBMIT_PATH, "body": body})
+    (OUT / "dry_run_preview.json").write_text(json.dumps(preview, indent=2))
+    print(f"\n📝 Full payloads written to {OUT/'dry_run_preview.json'}")
+    print(f"   Endpoint    : {API_BASE + SUBMIT_PATH}")
+    print(f"   Auth header : {AUTH_HEADER}: {AUTH_PREFIX}<key>")
+    print(f"   Ref field   : {REF_FIELD}")
+    print(f"   API key set : {'yes' if API_KEY else 'NO — export HIGGSFIELD_API_KEY'}")
+    if not (TREX_REF and SPINO_REF):
+        print("\n⚠️  TREX_REF_URL / SPINO_REF_URL not set — clips will lose Soul-mode consistency.")
+    print("\nWhen this looks right, drop --dry-run to actually generate.")
+
+# ============================================================
+# MAIN
+# ============================================================
+def run(clips):
+    if not API_KEY:
+        sys.exit("❌ Set HIGGSFIELD_API_KEY (see README). Or preview safely with: --dry-run")
+    if not (TREX_REF and SPINO_REF):
+        print("⚠️  No reference image URLs set — clips will be less consistent.")
+        print("    Set TREX_REF_URL and SPINO_REF_URL to your two hero stills (see README).\n")
+
+    manifest = []
+    for clip in clips:
+        print(f"▶ {clip['id']} — submitting…")
+        try:
+            rid, poll_url = submit(clip)
+            print(f"    id={rid}")
+            media = poll(poll_url)
+            dest = OUT / f"{clip['id']}.mp4"
+            download(media, dest)
+            print(f"  ✅ saved {dest}\n")
+            manifest.append({"id": clip["id"], "file": str(dest), "url": media})
+        except Exception as e:
+            print(f"  ❌ {clip['id']} failed: {e}\n")
+            manifest.append({"id": clip["id"], "error": str(e)})
+    (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    ok = sum(1 for m in manifest if "file" in m)
+    print(f"Done. {ok}/{len(clips)} clips in ./output/  → now assemble in CapCut.")
+
+def select(only):
+    if not only:
+        return CLIPS
+    wanted = {s.strip().upper() for s in only.split(",") if s.strip()}
+    valid = {c["id"].upper() for c in CLIPS}
+    unknown = wanted - valid
+    if unknown:
+        sys.exit(f"❌ Unknown clip id(s): {', '.join(sorted(unknown))}. Valid: {', '.join(c['id'] for c in CLIPS)}")
+    return [c for c in CLIPS if c["id"].upper() in wanted]
+
+def main():
+    ap = argparse.ArgumentParser(description="Generate RAWR FIGHTS Episode 1 clips via the Higgsfield API.")
+    ap.add_argument("--dry-run", action="store_true", help="Preview payloads/prompts without calling the API (no cost).")
+    ap.add_argument("--only", metavar="IDS", help="Comma-separated clip ids to run, e.g. V1 or V1,V4,V7.")
+    ap.add_argument("--list", action="store_true", help="List clip ids and one-line summaries, then exit.")
+    args = ap.parse_args()
+
+    if args.list:
+        for c in CLIPS:
+            tag = "⭐hero" if c["hero"] else "  std"
+            print(f"{c['id']}  {tag}  {c['prompt'][:80]}…")
+        return
+
+    clips = select(args.only)
+    if args.dry_run:
+        dry_run(clips)
+    else:
+        run(clips)
+
+if __name__ == "__main__":
+    main()
