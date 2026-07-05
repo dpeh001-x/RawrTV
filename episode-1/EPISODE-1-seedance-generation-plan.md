@@ -64,8 +64,32 @@ same dinosaur, shot to shot.
 - Cost: ~22.5 credits per 720p/5s clip.
 - Result URLs for each generated clip are recorded in `seedance-manifest.json`.
 
+## 🔁 REVISION ROUND 1 (from the clip picker)
+Driven by an exported edit spec (see `EPISODE-1-clip-editor.md`). Current best lineup
+lives in `seedance-manifest.json`; superseded originals are recorded there via `supersedes`.
+
+| Clip | Action | What changed |
+|------|--------|--------------|
+| V1 `r2` | regenerate | grand entrance + full city-trashing rampage |
+| V2 `flip` | edit (no credits) | horizontal mirror via ffmpeg `hflip` — no generation spent |
+| V3 `r2` | regenerate | aggressive head-on charge, T-Rex from left + Spino from right, equal size |
+| V4 `r2` | regenerate | more aggressive charge, realistic slam, equal size |
+| V5 `r2` | edit | fixed dino-morph + malformed vehicles; dinos stay distinct, normal 4-wheel cars |
+| V5b `new` | new | Spino charges at T-Rex at full force (added scene) |
+| V6 `ext` | extend | continues from V6's final frame — T-Rex comeback shoves Spino off (`start_image`) |
+| V7 | — | unchanged (not flagged) |
+| V8 `r2` | regenerate | finisher re-roll, equal size |
+| V9 / V10 / V11 `new` | new carnage | grapple-into-skyscraper · highway-overpass throw · burning-skyline lightning clash |
+
+**Extend mechanics:** the source clip is downloaded, its last frame extracted with
+ffmpeg (`imageio-ffmpeg` static binary), uploaded via `media_upload` → `media_confirm`,
+then passed as the `start_image` role alongside the two hero stills as `image_references`.
+The horizontal flip is a pure local ffmpeg transform, re-uploaded to get a hosted URL.
+
 ## ➡️ NEXT
-Take V1–V8 into the **CapCut build sheet** (`CAPCUT-BUILD-SHEET-downtown-demolition.md`)
-— overlays, health bars, nameplates, and VO are already prepared.
+Open **`clip-picker.html`** to review the revised lineup and flag anything else, or
+take the current set into the **CapCut build sheet**
+(`CAPCUT-BUILD-SHEET-downtown-demolition.md`) — overlays, health bars, nameplates, and VO
+are already prepared.
 
 *RAWR FIGHTS · RESULTS ARE REAL ✓*

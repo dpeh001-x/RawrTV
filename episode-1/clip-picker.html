@@ -150,22 +150,30 @@
 // Baked from episode-1/seedance-manifest.json
 const EPISODE = "Episode 1 — Downtown Demolition (T-Rex vs Spinosaurus)";
 const CLIPS = [
-  {id:"V1", shot:"T-Rex erupts up through the neon street (entrance)", refs:["TREX_REF"],
-   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_080540_7785db68-3542-4dc4-8b12-358597f270b0.mp4"},
-  {id:"V2", shot:"Spino smashes head-first through a skyscraper (entrance)", refs:["SPINO_REF"],
-   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090548_d1370753-f497-4007-b086-a15616b9d593.mp4"},
-  {id:"V3", shot:"The two face off across a flooded neon street (staredown)", refs:["TREX_REF","SPINO_REF"],
-   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090609_456b47f2-e8bb-45f6-936d-8f60af7c35c1.mp4"},
-  {id:"V4", shot:"T-Rex charges and slams Spino through an office building", refs:["TREX_REF","SPINO_REF"],
-   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090612_2e01a4f7-c8de-4b0d-a7a9-3d7cabb77068.mp4"},
-  {id:"V5", shot:"Spino tail-swipes a row of cars and a bus into T-Rex", refs:["SPINO_REF","TREX_REF"],
-   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090933_1c2f6dc6-3a61-4736-981a-1e5433f36ca0.mp4"},
-  {id:"V6", shot:"Spino pins T-Rex against a skyscraper, jaws snapping", refs:["SPINO_REF","TREX_REF"],
-   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090935_33a5b723-e406-44e3-b37d-f31cb3613c87.mp4"},
-  {id:"V7", shot:"T-Rex drives Spino backward through a giant neon billboard", refs:["TREX_REF","SPINO_REF"],
+  {id:"V1", rev:"r2", shot:"T-Rex grand entrance + city-trashing rampage", refs:["TREX_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094003_3a21a32f-230a-4373-b8f9-b1388106c99b.mp4"},
+  {id:"V2", rev:"flip", shot:"Spino skyscraper entrance — mirrored (no credits)", refs:["SPINO_REF"],
+   url:"https://d2ol7oe51mr4n9.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/e571da8e-9b8f-49d9-b474-bb375f0a417b.mp4"},
+  {id:"V3", rev:"r2", shot:"Head-on charge standoff — T-Rex L, Spino R, equal size", refs:["TREX_REF","SPINO_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094010_5dcd0aa4-a565-41b6-995c-bfcf5eaa8158.mp4"},
+  {id:"V4", rev:"r2", shot:"T-Rex aggressive slam through office building, equal size", refs:["TREX_REF","SPINO_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094016_bd86c65a-6b2a-4641-8fb8-224b74a0d499.mp4"},
+  {id:"V5", rev:"r2", shot:"Spino tail-swipe — fixed (no morph, normal cars)", refs:["SPINO_REF","TREX_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094453_591a8a6a-a064-4459-86c8-034a91892cfd.mp4"},
+  {id:"V5b", rev:"new", shot:"Spino charges at T-Rex at full force (new)", refs:["SPINO_REF","TREX_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094500_10f0d430-a8ad-42f8-9955-b237200574a9.mp4"},
+  {id:"V6", rev:"ext", shot:"Extension — T-Rex comeback shoves Spino off (from V6 last frame)", refs:["TREX_REF","SPINO_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094508_d06e1b50-9511-4611-a715-b5b7c4691e74.mp4"},
+  {id:"V7", rev:"original", shot:"T-Rex drives Spino through a giant neon billboard (unchanged)", refs:["TREX_REF","SPINO_REF"],
    url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090939_30ce93ec-5fc5-4d85-8214-1da9535f8648.mp4"},
-  {id:"V8", shot:"FINISHER — slow-mo neck clamp and slam, pavement craters", refs:["TREX_REF","SPINO_REF"],
-   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_091158_66553dcb-b447-41e3-accc-79656559bfc3.mp4"},
+  {id:"V8", rev:"r2", shot:"FINISHER — slow-mo neck clamp + slam (re-roll)", refs:["TREX_REF","SPINO_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094736_85df89dc-7341-45dc-9dcd-d26948a5d936.mp4"},
+  {id:"V9", rev:"new", shot:"Savage grapple, orbiting crane, skyscraper buckles (new carnage)", refs:["TREX_REF","SPINO_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_095015_b0edfd3e-117f-47b1-82ef-f71992086ecc.mp4"},
+  {id:"V10", rev:"new", shot:"T-Rex hurls Spino through a highway overpass (new carnage)", refs:["TREX_REF","SPINO_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094746_efa5e07c-a5a1-4107-b06e-2599293844e7.mp4"},
+  {id:"V11", rev:"new", shot:"Roaring clash, burning skyline + lightning (new carnage)", refs:["TREX_REF","SPINO_REF"],
+   url:"https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_095234_7e77261e-9514-4094-86c6-fe83d015b34d.mp4"},
 ];
 
 const grid = document.getElementById('grid');
@@ -175,7 +183,7 @@ function cardHTML(c){
   return `
   <div class="card" data-id="${c.id}" data-flagged="0" data-act="keep">
     <div class="vidwrap">
-      <span class="tag">${c.id}</span>
+      <span class="tag">${c.id}${c.rev && c.rev!=='original' ? ' · '+c.rev : ''}</span>
       <video src="${c.url}" controls preload="metadata" playsinline muted loop poster=""></video>
     </div>
     <div class="body">
