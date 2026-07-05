@@ -29,6 +29,11 @@
       "id": "50b43541-39f0-41e1-a88c-a75a549ee936",
       "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/50b43541-39f0-41e1-a88c-a75a549ee936.png",
       "note": "final frame of V14 (near-fatal pin), used as start_image for V14ext"
+    },
+    "V6_first_frame": {
+      "id": "adb35180-8d73-4a41-b726-be6e6abb140e",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/adb35180-8d73-4a41-b726-be6e6abb140e.png",
+      "note": "first frame of V6 (pin), used as end_image for V6pre so it cuts seamlessly into V6"
     }
   },
   "active": [
@@ -38,6 +43,7 @@
     { "id": "V4",   "rev": "r3",       "shot": "T-Rex bites Spino, Spino counters",                 "refs": ["TREX_REF","SPINO_REF"], "job_id": "3f02b788-a4e9-4d45-a839-6606676b1332", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_101518_3f02b788-a4e9-4d45-a839-6606676b1332.mp4" },
     { "id": "V5",   "rev": "r3",       "shot": "Aggressive cinematic Spino tail-sweep",             "refs": ["SPINO_REF","TREX_REF"], "job_id": "c3a0774c-7edd-4482-a187-c73342bbe37e", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_101527_c3a0774c-7edd-4482-a187-c73342bbe37e.mp4" },
     { "id": "V5b",  "rev": "r2",       "shot": "Spino charges at T-Rex at full force",              "refs": ["SPINO_REF","TREX_REF"], "job_id": "fe5fcbb3-baee-40a3-8a48-26cee1979bc4", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_101736_fe5fcbb3-baee-40a3-8a48-26cee1979bc4.mp4" },
+    { "id": "V6pre","rev": "leadin",   "shot": "Spino rams T-Rex up the building into the pin (ends on V6's first frame)", "refs": ["SPINO_REF","TREX_REF"], "end_image": "adb35180-8d73-4a41-b726-be6e6abb140e", "job_id": "87d52fda-223b-4e19-bb19-15395e3b091d", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_112321_87d52fda-223b-4e19-bb19-15395e3b091d.mp4" },
     { "id": "V6",   "rev": "pin",      "shot": "Spino pins T-Rex against a skyscraper",             "refs": ["SPINO_REF","TREX_REF"], "job_id": "33a5b723-e406-44e3-b37d-f31cb3613c87", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090935_33a5b723-e406-44e3-b37d-f31cb3613c87.mp4" },
     { "id": "V6ext","rev": "ext",      "shot": "T-Rex comeback shoves Spino off (continues from V6 last frame)", "refs": ["TREX_REF","SPINO_REF"], "start_image": "636d0b9c-0191-45d7-a6bf-c4c99b0b3a03", "job_id": "d06e1b50-9511-4611-a715-b5b7c4691e74", "duration": 8, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_094508_d06e1b50-9511-4611-a715-b5b7c4691e74.mp4" },
     { "id": "V7",   "rev": "original", "shot": "T-Rex drives Spino through a giant neon billboard", "refs": ["TREX_REF","SPINO_REF"], "job_id": "30ce93ec-5fc5-4d85-8214-1da9535f8648", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_090939_30ce93ec-5fc5-4d85-8214-1da9535f8648.mp4" },
