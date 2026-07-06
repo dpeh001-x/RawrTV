@@ -1,0 +1,34 @@
+{
+  "episode": "Episode 2 — T-Rex vs Triceratops (\"The rivalry that actually happened\")",
+  "model": "seedance_2_0",
+  "settings": {
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "mode": "std",
+    "generate_audio": false,
+    "bitrate_mode": "standard"
+  },
+  "size_ratio": "T-Rex : Triceratops length = 4:3 (T-Rex ~one-third longer), locked in every two-character shot",
+  "reference_stills": {
+    "TREX_REF": {
+      "id": "2a6c7b99-c302-4b57-9b28-f5dd4e234408",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_075839_2a6c7b99-c302-4b57-9b28-f5dd4e234408.png"
+    },
+    "TRIKE_REF": {
+      "id": "53fb3f96-a82c-4792-a66d-f79ecfbb29e2",
+      "model": "nano_banana_pro",
+      "resolution": "2k",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_071057_53fb3f96-a82c-4792-a66d-f79ecfbb29e2.png"
+    }
+  },
+  "active": [
+    { "id": "E2V1", "shot": "T-Rex destructive epic entrance (smashes through skyscraper corner)", "refs": ["TREX_REF"], "job_id": "35459b97-c7b8-4d76-acd5-c4b32dee8e58", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_072240_35459b97-c7b8-4d76-acd5-c4b32dee8e58.mp4" },
+    { "id": "E2V2", "shot": "Super-intense staredown into an aggressive horns-forward standoff", "refs": ["TREX_REF","TRIKE_REF"], "job_id": "fa966a14-cb42-4a02-ad5b-f5e32eef8b97", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_072246_fa966a14-cb42-4a02-ad5b-f5e32eef8b97.mp4" },
+    { "id": "E2V3", "shot": "Triceratops charge + horn gore (very aggressive)", "refs": ["TRIKE_REF","TREX_REF"], "job_id": "db90986d-c6eb-4234-971d-4b0d918a2f5e", "duration": 8, "genre": "action", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_072304_db90986d-c6eb-4234-971d-4b0d918a2f5e.mp4" },
+    { "id": "E2V4", "shot": "T-Rex quick sly dodge then bites Triceratops in the neck", "refs": ["TREX_REF","TRIKE_REF"], "job_id": "5ef9f6fe-d2a2-4fda-b468-5d45923c4895", "duration": 5, "genre": "action", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_072800_5ef9f6fe-d2a2-4fda-b468-5d45923c4895.mp4" },
+    { "id": "E2V5", "shot": "Brutal shoving match — Triceratops bulldozes T-Rex through cars (high adrenaline)", "refs": ["TREX_REF","TRIKE_REF"], "job_id": "75756c02-5c93-4887-8fbc-1424a624f92e", "duration": 8, "genre": "action", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_072802_75756c02-5c93-4887-8fbc-1424a624f92e.mp4" },
+    { "id": "E2V6", "shot": "Triceratops hooks horns and flips T-Rex through a storefront", "refs": ["TRIKE_REF","TREX_REF"], "job_id": "e4cbd8fe-1cd9-4fe9-a033-0a534bfcedfa", "duration": 5, "genre": "action", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_072817_e4cbd8fe-1cd9-4fe9-a033-0a534bfcedfa.mp4" },
+    { "id": "E2V7", "shot": "T-Rex slams and pins Triceratops, jaws on the frill/neck (near-finisher)", "refs": ["TREX_REF","TRIKE_REF"], "job_id": "600e3217-fdd4-4f8d-8ebe-8b1bcfc481c1", "duration": 5, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260706_073045_600e3217-fdd4-4f8d-8ebe-8b1bcfc481c1.mp4" }
+  ],
+  "archive": []
+}
