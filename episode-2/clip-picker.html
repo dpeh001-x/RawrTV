@@ -158,7 +158,7 @@ const B2 = "https://d2ol7oe51mr4n9.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9F
 
 // zone: 'active' | 'archive'
 const CLIPS = [
-  {id:"E2V1", rev:"new", zone:"active", shot:"T-Rex destructive epic entrance (through a skyscraper corner)", refs:["TREX_REF"], url:B+"hf_20260706_072240_35459b97-c7b8-4d76-acd5-c4b32dee8e58.mp4"},
+  {id:"E2V1", rev:"r2🔊", zone:"active", shot:"T-Rex destructive entrance — worm's-eye, realistic physics 🔊", refs:["TREX_REF"], url:B+"hf_20260706_083308_a2d7a714-db63-431e-bdb5-4c0095f8d582.mp4"},
   {id:"E2V2", rev:"new", zone:"active", shot:"Super-intense staredown into a horns-forward standoff", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_072246_fa966a14-cb42-4a02-ad5b-f5e32eef8b97.mp4"},
   {id:"E2V3", rev:"new", zone:"active", shot:"Triceratops charge + horn gore (very aggressive)", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_072304_db90986d-c6eb-4234-971d-4b0d918a2f5e.mp4"},
   {id:"E2V4", rev:"new", zone:"active", shot:"T-Rex sly dodge then bites Triceratops in the neck", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_072800_5ef9f6fe-d2a2-4fda-b468-5d45923c4895.mp4"},
@@ -167,13 +167,15 @@ const CLIPS = [
   {id:"E2V7", rev:"new", zone:"active", shot:"T-Rex slams and pins Triceratops (near-finisher)", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_073045_600e3217-fdd4-4f8d-8ebe-8b1bcfc481c1.mp4"},
   {id:"E2V8", rev:"snd", zone:"active", shot:"Worm's-eye: T-Rex stomps to camera + roars 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_074343_fa769c9e-c969-4f4d-a9be-7987623b3d03.mp4"},
   {id:"E2V9", rev:"snd", zone:"active", shot:"Sweeping crane orbit around the clash 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_074348_3dec8415-dd32-4cba-9d8d-8ceecba7f3aa.mp4"},
-  {id:"E2V10", rev:"snd", zone:"active", shot:"Behind-Triceratops charging POV 🔊", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_074353_99707591-aafc-442b-ba5a-09dff387a0f7.mp4"},
+  {id:"E2V10", rev:"r2🔊", zone:"active", shot:"Behind-Triceratops charging POV 🔊", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_083315_e2312787-7383-44a2-b03f-7e24db49b439.mp4"},
   {id:"E2V11", rev:"snd", zone:"active", shot:"Slow-mo macro: horns vs jaws impact 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_074909_088a6eb9-6ec8-40e0-87bf-d14384ae85f0.mp4"},
   {id:"E2V12", rev:"snd", zone:"active", shot:"Chaotic dutch-angle handheld brawl 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_074920_c3be42d7-1035-45bc-a5a4-17ae82ae27b8.mp4"},
   {id:"E2V13", rev:"snd", zone:"active", shot:"Wide establishing crane pull-back 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_075136_79771823-f1a0-46ce-91a0-3d7abbc1d3c6.mp4"},
   {id:"E2V14", rev:"snd", zone:"active", shot:"Triceratops full-street charge → massive T-Rex damage 🔊", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_081027_3cf468f6-42df-4bf5-8c8e-54313f9cfce9.mp4"},
   {id:"E2V15", rev:"snd", zone:"active", shot:"T-Rex dramatic aerial bite attack 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_081032_fdc2ac5f-7a6c-468d-baff-a9f801f311b2.mp4"},
   {id:"E2V16", rev:"snd", zone:"active", shot:"Head-to-head deadlock in the destroyed city 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_081049_630b37e9-e592-4f6a-a38c-2075bb031850.mp4"},
+  {id:"E2V1", rev:"orig", zone:"archive", shot:"T-Rex destructive entrance (front angle, silent)", refs:["TREX_REF"], url:B+"hf_20260706_072240_35459b97-c7b8-4d76-acd5-c4b32dee8e58.mp4"},
+  {id:"E2V10", rev:"v1", zone:"archive", shot:"Behind-Triceratops charging POV (first take)", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_074353_99707591-aafc-442b-ba5a-09dff387a0f7.mp4"},
 ];
 CLIPS.forEach((c,i)=>{ c.key = c.id+"-"+c.rev+"-"+i; c.fname = (c.id+"_"+c.rev).replace(/[^A-Za-z0-9_]/g,"")+".mp4"; });
 
