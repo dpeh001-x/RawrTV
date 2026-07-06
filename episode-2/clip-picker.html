@@ -172,10 +172,12 @@ const CLIPS = [
   {id:"E2V12", rev:"snd", zone:"active", shot:"Chaotic dutch-angle handheld brawl 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_074920_c3be42d7-1035-45bc-a5a4-17ae82ae27b8.mp4"},
   {id:"E2V13", rev:"snd", zone:"active", shot:"Wide establishing crane pull-back 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_075136_79771823-f1a0-46ce-91a0-3d7abbc1d3c6.mp4"},
   {id:"E2V14", rev:"snd", zone:"active", shot:"Triceratops full-street charge → massive T-Rex damage 🔊", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_081027_3cf468f6-42df-4bf5-8c8e-54313f9cfce9.mp4"},
-  {id:"E2V14ext", rev:"ext🔊", zone:"active", shot:"T-Rex recovers: tail sweep, gets up + roars (continues E2V14) 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_090832_0f57730b-438f-4742-8ba2-efac261369fa.mp4"},
+  {id:"E2V14ext", rev:"r2🔊", zone:"active", shot:"T-Rex recovers: tail sweep, gets up + roars (no collapse) 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_092109_2bc75458-2193-4d6a-8114-ef7c692bbd82.mp4"},
   {id:"E2V15", rev:"snd", zone:"active", shot:"T-Rex dramatic aerial bite attack 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_081032_fdc2ac5f-7a6c-468d-baff-a9f801f311b2.mp4"},
   {id:"E2V16", rev:"snd", zone:"active", shot:"Head-to-head deadlock in the destroyed city 🔊", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_081049_630b37e9-e592-4f6a-a38c-2075bb031850.mp4"},
+  {id:"E2V17", rev:"snd", zone:"active", shot:"Triceratops turns away, walks off down the neon main street 🔊", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_092415_ca3a566f-86eb-4d85-935a-a50b1b060433.mp4"},
   {id:"E2V1", rev:"orig", zone:"archive", shot:"T-Rex destructive entrance (front angle, silent)", refs:["TREX_REF"], url:B+"hf_20260706_072240_35459b97-c7b8-4d76-acd5-c4b32dee8e58.mp4"},
+  {id:"E2V14ext", rev:"v1", zone:"archive", shot:"T-Rex tail-sweep recovery (first take — building collapsed)", refs:["TREX_REF","TRIKE_REF"], url:B+"hf_20260706_090832_0f57730b-438f-4742-8ba2-efac261369fa.mp4"},
   {id:"E2V10", rev:"v1", zone:"archive", shot:"Behind-Triceratops charging POV (first take)", refs:["TRIKE_REF","TREX_REF"], url:B+"hf_20260706_074353_99707591-aafc-442b-ba5a-09dff387a0f7.mp4"},
 ];
 CLIPS.forEach((c,i)=>{ c.key = c.id+"-"+c.rev+"-"+i; c.fname = (c.id+"_"+c.rev).replace(/[^A-Za-z0-9_]/g,"")+".mp4"; });
