@@ -161,6 +161,9 @@ const B = "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM
 
 // zone: 'active' | 'archive' · act: 1-4 for section separators · all clips carry native audio
 const CLIPS = [
+  {id:"E3V19", act:0, rev:"snd🔊", zone:"active", shot:"INCREDIBLY GRAND T-Rex entrance — cranes up from the street, emerges from neon smoke + lightning, strides forward, thunderous roar", refs:["TREX_REF"], url:B+"hf_20260707_083056_357dc9e4-1c41-4a17-b933-fc0fe32f7642.mp4"},
+  {id:"E3V17", act:0, rev:"snd🔊", zone:"active", shot:"Cinematic charge #1 — low centered speed shot, both beasts sprint from opposite ends toward camera, spray blasting the lens", refs:["TREX_REF","GIGA_REF"], url:B+"hf_20260707_083013_ed00ad2b-ca17-44d1-8dde-b400f113d881.mp4"},
+  {id:"E3V18", act:0, rev:"snd🔊", zone:"active", shot:"Cinematic charge #2 — high aerial descending drone shot, both charge from opposite ends on a collision course", refs:["TREX_REF","GIGA_REF"], url:B+"hf_20260707_083040_ed30d883-56a7-4104-a4bc-422173fc0834.mp4"},
   {id:"E3V1",  act:1, rev:"snd🔊", zone:"active", shot:"Giga entrance — prowls out of the neon rain, blade-teeth roar; T-Rex faces off", refs:["GIGA_REF","TREX_REF"], url:B+"hf_20260707_024005_f2c20124-b5b3-4fa0-88a1-3ae47d472d96.mp4"},
   {id:"E3V2",  act:1, rev:"snd🔊", zone:"active", shot:"Tense staredown, both lowered, circling", refs:["TREX_REF","GIGA_REF"], url:B+"hf_20260707_024009_2a226bf0-a605-4fc9-a9f0-53805e15d679.mp4"},
   {id:"E3V3",  act:1, rev:"snd🔊", zone:"active", shot:"Both charge — collide head-on", refs:["TREX_REF","GIGA_REF"], url:B+"hf_20260707_024024_4db5dbc3-330c-4d21-8012-9830e05dc118.mp4"},
@@ -180,7 +183,7 @@ const CLIPS = [
 ];
 CLIPS.forEach((c,i)=>{ c.key = c.id+"-"+c.rev+"-"+i; c.fname = (c.id+"_"+c.rev).replace(/[^A-Za-z0-9_]/g,"")+".mp4"; });
 
-const ACT_LABELS = {1:"Act 1 · Face-off", 2:"Act 2 · Giga's offense", 3:"Act 3 · T-Rex answers", 4:"Act 4 · Deadlock finale"};
+const ACT_LABELS = {0:"Cinematic B-roll · Entrance & charges", 1:"Act 1 · Face-off", 2:"Act 2 · Giga's offense", 3:"Act 3 · T-Rex answers", 4:"Act 4 · Deadlock finale"};
 
 const activeGrid = document.getElementById('activeGrid');
 const archiveGrid = document.getElementById('archiveGrid');
@@ -237,7 +240,7 @@ function makeCard(c){
 function mount(){
   let lastAct = null;
   CLIPS.forEach(c=>{
-    if(c.zone==='active' && c.act && c.act!==lastAct){
+    if(c.zone==='active' && c.act!=null && c.act!==lastAct){
       const sep = document.createElement('div');
       sep.className = 'actsep'; sep.textContent = ACT_LABELS[c.act] || ('Act '+c.act);
       sep.dataset.sepAct = c.act;

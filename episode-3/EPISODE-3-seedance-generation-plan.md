@@ -26,7 +26,15 @@ size note is pasted into every two-character prompt.
 - **GIGANOTOSAURUS:** *a colossal kaiju-sized Giganotosaurus, slightly longer and leaner than the T-Rex, with charcoal-grey and rust-red striped hide, a low bony ridge over pale yellow eyes, long blade-like serrated slashing teeth, athletic predatory build*
 - **SCENE:** *rain-soaked neon-lit downtown city at night, at true kaiju scale, tiny cars and buses far below on the flooded street for scale, sheets of rain and steam, glistening wet scales, dramatic blockbuster lighting, photorealistic, hyper-detailed, vertical 9:16. Absolutely no people, no humans, no crowds anywhere in frame.*
 
-## 🎬 THE CLIPS — 4-act structure (16 shots, all with sound)
+## 🎬 THE CLIPS — 4-act structure (16 shots + 3 cinematic B-roll, all with sound)
+### CINEMATIC B-ROLL — entrance & charges (added round 2)
+| Clip | Shot | refs | dur |
+|------|------|------|-----|
+| E3V19 | **INCREDIBLY GRAND T-Rex entrance** — cranes up from the street, emerges from neon smoke + lightning, strides forward, thunderous roar | TREX | 6s |
+| E3V17 | Cinematic charge #1 — low centered speed shot, both beasts sprint from opposite ends toward camera, spray blasting the lens | both | 6s |
+| E3V18 | Cinematic charge #2 — high aerial descending drone shot, both charge from opposite ends on a collision course | both | 6s |
+
+
 ### ACT 1 — Face-off
 | Clip | Shot | refs | dur |
 |------|------|------|-----|
