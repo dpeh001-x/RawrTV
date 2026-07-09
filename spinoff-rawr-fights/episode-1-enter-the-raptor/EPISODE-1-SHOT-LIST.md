@@ -1,8 +1,11 @@
 # 🥋🦖 EPISODE 1 — "ENTER THE RAPTOR"
-### RAWR LEGENDS · The Dragon vs. The Raptor · 16:9 · one track: Onslaught1
+### RAWR FIGHTS: CINEMATIC · The Dragon vs. The Raptor · 16:9 · one track: Dead Meat
 
 **Set:** rain-soaked Hong Kong rooftop fight arena, night, neon (pink/cyan), steam, puddles.
 **Consistency lever:** every clip is image-to-video driven from the hero stills in `/stills`.
+**Scale lock:** the Raptor is **slightly smaller than the Dragon** (~1.5 m vs ~1.7 m) — a real
+duel of equals, never a monster towering over him. **Physics lock:** real weight, momentum,
+recoil, and grounded gravity in every clip (see the bible's Physics + Scale rules).
 
 ---
 
@@ -20,6 +23,7 @@ All 8 variants are saved in `/stills`. **Winners picked:**
   - `S1-dragon-f.png` (job `9d342be0`) — jumpsuit stripped to the waist, battle-damaged: use as the Act III mid-fight look (shots 9–12).
   - `S1-dragon-c/d.png` (soul_2 likeness pass) + `a/b` (first pass) — alternates/reference only.
 - **S2 → `S2-raptor-b.png`** (job `f4003eac`) — snarling jaw, amber eye, neon steam. (`a` = clean side profile, use as secondary angle reference)
+  - ⚠️ **Scale note:** S2 was generated as a solo portrait described "~6 ft" — fine as a *look* reference (no size cue in-frame), but every **two-shot** clip must prompt the locked relationship (**raptor slightly SHORTER than the Dragon**). If any two-shot renders the raptor towering, regenerate that clip; the still itself does not need redoing.
 - **S3 → `S3-arena-a.png`** (job `293ff1a6`) — symmetrical raised ring, giant neon dragon, lanterns, skyline. (`b` = elevated alt angle, usable for shot 10's God's-eye)
 - **S4 → `S4-keyart-b.png`** (job `358a3dde`) — brush-style ENTER THE RAPTOR type, cyan-glow Dragon vs pink-glow Raptor. This is the title drop AND the YouTube thumbnail.
 
@@ -29,7 +33,9 @@ Reference the winner's **job_id** as the start-frame in every video generation b
 
 ## 🎥 THE CLIPS — 23 shots, 23 UNIQUE ANGLES (the non-repeating rule)
 
-Cut on the Onslaught1 beat grid. Angles never repeat — that's the series signature.
+Cut on the Dead Meat beat grid. Angles never repeat — that's the series signature.
+Every clip holds the **scale lock** (raptor slightly smaller than the Dragon) and the
+**physics lock** (real weight, momentum, recoil, grounded gravity).
 
 **Fight logic — three false endings:**
 1. Raptor wins the first half: Switchblade slashes, then the Pickpocket draws FIRST BLOOD.
@@ -53,7 +59,7 @@ Cut on the Onslaught1 beat grid. Angles never repeat — that's the series signa
 | 1 | The set awakens | **Slow drone push-in, high wide, descending** | S3 | neon flickers on sign by sign, rain, steam rises, empty arena breathing |
 | 2 | The Dragon's entrance | **Low tracking shot from behind, slow-mo** | S1 | he walks through parting steam toward camera-away, knuckles crack, yellow suit glowing under neon |
 | 3 | The Raptor's reveal | **Extreme close-up, dutch tilt** | S2 | amber eye snaps open in darkness, pupil contracts, rain drips off snout, low growl |
-| 4 | Title drop | **Crash-zoom out from lightning strike** | S4 | key art slams in ON THE FIRST BIG HIT of Onslaught1 |
+| 4 | Title drop | **Crash-zoom out from lightning strike** | S4 | key art slams in ON THE FIRST BIG HIT of Dead Meat |
 
 ### ACT II — THE STANDOFF (~0:15–0:30)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
@@ -87,12 +93,12 @@ Cut on the Onslaught1 beat grid. Angles never repeat — that's the series signa
 ### ACT III-D — THE COMEBACK: KIP-UP + NUNCHAKU KO — THE TRUE FINALE (~1:02–1:20)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
 |---|---|---|---|---|
-| 18 | THE KIP-UP | **Vertical crane boom-up, rising with him** | S1-f | his eyes SNAP open on the concrete — legs whip skyward and he somersaults up in the iconic no-hands kip-up, landing coiled in stance in one motion; the camera rises with his body. **Onslaught1 slams back in the instant his feet plant** |
+| 18 | THE KIP-UP | **Vertical crane boom-up, rising with him** | S1-f | his eyes SNAP open on the concrete — legs whip skyward and he somersaults up in the iconic no-hands kip-up, landing coiled in stance in one motion; the camera rises with his body. **Dead Meat slams back in the instant his feet plant** |
 | 19 | The draw | **Vertical whip-tilt: belt → hands → eyes** | S1-f | whip-tilt up his body as the nunchaku drops from his belt into his palm, chain snapped taut between both fists at chest height, his eyes burning over the top of it, water shaking off the wood |
 | 20 | THE CRAZY COMBO (wind-up) | **180° orbiting arc shot, speed-ramped** | S1-f | camera circles as the nunchaku blurs into the craziest combination: double figure-8s, behind-the-back pass, under-the-arm catch, neck wrap and re-draw, hand-to-hand switches — and he's WALKING TOWARD the raptor the entire time, rain spiraling off the chains |
 | 21 | THE FLURRY | **Locked frontal medium, rhythmic strobe speed-ramps** | S1-f + S2 | blow after blow to the raptor's head — left, right, up under the jaw — every strike landing ON a beat of the track, the head snapping side to side, it can't bite through the blur, legs wobbling |
 | 22 | THE CRACK | **Bullet-time frozen-moment 90° sweep** | S2 | the final overhead strike lands dead on the crown — time freezes mid-impact and the camera sweeps around it: a visible fracture splitting across the raptor's skull ridge, one pupil blown wide, rain suspended — then time releases and its legs buckle |
-| 23 | KO + end card | **Slow push-in to hero freeze-frame, film-burn** | S1-f + S2 | the raptor face-plants into a puddle, OUT COLD, tongue lolling. The Dragon stands over it chest heaving, spins the nunchaku once, tucks it away, thumbs his nose with a flick. Freeze on that frame, film grain burns out → RAWR LEGENDS end card |
+| 23 | KO + end card | **Slow push-in to hero freeze-frame, film-burn** | S1-f + S2 | the raptor face-plants into a puddle, OUT COLD, tongue lolling. The Dragon stands over it chest heaving, spins the nunchaku once, tucks it away, thumbs his nose with a flick. Freeze on that frame, film grain burns out → RAWR FIGHTS end card |
 
 **Angle audit ✓** 1 drone push / 2 low track behind / 3 dutch ECU / 4 crash-zoom out / 5 locked
 symmetrical wide / 6 over-shoulder / 7 worm's-eye / 8 whip-pan / 9 low lateral dolly slide /
@@ -113,16 +119,16 @@ frontal strobe-ramp / 22 bullet-time sweep / 23 slow push-in freeze. **23 shots,
 ---
 
 ## 🎵 MUSIC SYNC
-- Track: `music/Onslaught1.mp3` (the series track — every episode)
-- Higgsfield media_id `d48ff0d5-d756-4625-961e-7c8ed744bb2f`
+- Track: `music/Dead_meat.mp3` (the series track — every episode)
+- Higgsfield media_id `12c8ddb8-33cf-4b11-a7af-ea5454a300bb`
 - Map the beat grid in the editor first; clips 4, 8, 12, 14 land on hits
   (shot 9's claw rake lands just OFF the beat — sneak attacks shouldn't be telegraphed by the music).
 - Shot 13 (one-inch hold): quick half-second duck, then shot 14's punch lands on a big hit.
 - **Shots 16–17 = FULL music dropout.** The Guillotine impact kills the track; over shot 17
   it's only rain and neon buzz. The silence makes the knockdown feel final.
-- **Shot 18 (the kip-up) restarts Onslaught1 the frame his feet plant** — the comeback and
+- **Shot 18 (the kip-up) restarts Dead Meat the frame his feet plant** — the comeback and
   the track come back together. Shot 21's flurry lands strike-per-beat; shot 22's skull-crack
   is the track's single biggest hit; shot 23 rides the tail-out to the freeze.
 
 ## ⚙️ EXPORT
-1920×1080 · 24 or 30fps · AI-disclosure ON · title: **RAWR LEGENDS Ep.1 — ENTER THE RAPTOR 🐉🦖**
+1920×1080 · 24 or 30fps · AI-disclosure ON · title: **RAWR FIGHTS Ep.1 — ENTER THE RAPTOR 🐉🦖**
