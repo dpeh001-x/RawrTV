@@ -27,9 +27,11 @@ Reference the winner's **job_id** as the start-frame in every video generation b
 
 ---
 
-## 🎥 THE CLIPS — 12 shots, 12 UNIQUE ANGLES (the non-repeating rule)
+## 🎥 THE CLIPS — 15 shots, 15 UNIQUE ANGLES (the non-repeating rule)
 
 Cut on the Onslaught1 beat grid. Angles never repeat — that's the series signature.
+The fight is built around Bruce's three signature weapons, in escalating order:
+**nunchaku combos → flying kick → one-inch punch (the finisher).**
 
 ### ACT I — THE GRAND INTRODUCTION (~0:00–0:15, music: intro build)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
@@ -46,17 +48,31 @@ Cut on the Onslaught1 beat grid. Angles never repeat — that's the series signa
 | 6 | The Dragon reads him | **Over-the-Raptor's-shoulder, shallow focus** | S1 | slides into stance, beckons with fingers, iconic 'come here' gesture |
 | 7 | The Raptor circles | **Ground-level worm's-eye, wide lens distortion** | S2 | sickle claws pass inches from lens through puddle, tail whips |
 
-### ACT III — THE FIGHT (~0:30–0:55, music: full onslaught)
+### ACT III — THE FIGHT (~0:30–0:50, music: full onslaught)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
 |---|---|---|---|---|
-| 8 | First exchange | **Whip-pan following the lunge** | S2 | raptor lunges, Dragon sidesteps, claws shred a lantern, sparks |
-| 9 | The flurry | **Handheld shaky close, inside the fight** | S1 | punches and one-inch strikes vs snapping jaws, rain flying off impacts |
-| 10 | The kick | **Top-down overhead (God's-eye)** | S3 + both | Dragon's flying side-kick connects, raptor skids across wet concrete through neon reflections |
-| 11 | Last stand | **Reflection shot: action seen in a puddle, then tilt up** | S2 | raptor rises, shakes off rain, screams at the sky |
-| 12 | The finish | **Slow push-in to hero freeze-frame, film-burn** | S1 | Dragon lands the final strike, freeze on impact, film grain burns out → RAWR LEGENDS end card |
+| 8 | First exchange | **Whip-pan following the lunge** | S2 | raptor lunges, Dragon sidesteps at the last inch, claws shred a lantern, sparks and paper embers |
+| 9 | Nunchaku reveal | **Rack focus: raptor's snapping jaws foreground → Dragon behind** | S1-e | jaws snarl in blurred foreground; focus snaps to the Dragon pulling nunchaku from his belt, one slow warm-up spin, eyes locked |
+| 10 | THE CRAZY COMBO | **180° orbiting arc shot, speed-ramped** | S1-f | camera circles him as the nunchaku blurs: double figure-8s, behind-the-back pass, under-the-arm catch, neck wrap and re-draw — rain whipping off the chains in spirals, neon streaks smearing |
+| 11 | Combo connects | **Handheld shaky close, inside the fight** | S1-f + S2 | end of the combo cracks across the raptor's jaw mid-lunge, spit and rain flying, raptor staggers sideways |
+| 12 | THE FLYING KICK | **Top-down overhead (God's-eye)** | S3-b + both | Dragon launches — full flying side-kick connects square in the ribs, raptor skids across the wet ring through neon reflections, lanterns scatter |
+| 13 | Last stand | **Reflection shot: action in a puddle, then tilt up** | S2 | the raptor rises one final time, shakes off rain, screams at the sky — it's not done |
 
-**Angle audit ✓** drone push / low track / dutch ECU / crash-zoom / locked wide / over-shoulder /
-worm's-eye / whip-pan / handheld / God's-eye / puddle-reflection / slow push freeze. **Zero repeats.**
+### THE FINISHER — ONE-INCH PUNCH (~0:50–0:60, music: final hit + tail-out)
+| # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
+|---|---|---|---|---|
+| 14 | One inch | **Locked-off macro insert, extreme close-up** | S1-f | DEAD SILENCE beat: his open palm settles ONE INCH from the raptor's heaving chest scales, fingers slowly curl into a fist, a single raindrop rolls off his knuckle — hold it, let the audience lean in |
+| 15 | THE PUNCH | **Fist-level side profile, ultra-slow-mo (1000fps feel), speed-ramp** | S1-f + S2 | the fist travels one inch — a shockwave ring of mist explodes off the raptor's chest, rain hangs suspended, the raptor is LAUNCHED across the ring through the lantern ropes; ramp to real-time on the landing, freeze on the Dragon's follow-through, film-burn to the RAWR LEGENDS end card |
+
+**Angle audit ✓** 1 drone push / 2 low track behind / 3 dutch ECU / 4 crash-zoom out / 5 locked
+symmetrical wide / 6 over-shoulder / 7 worm's-eye / 8 whip-pan / 9 rack focus / 10 orbiting arc /
+11 handheld / 12 God's-eye / 13 puddle-reflection tilt-up / 14 locked macro insert / 15 fist-level
+slow-mo profile. **15 shots, zero repeats.**
+
+### Wardrobe continuity 👕
+- Shots 1–8: full jumpsuit (**S1-e**)
+- Shots 9–15: jumpsuit stripped to the waist, battle-damaged (**S1-f**) — the nunchaku reveal
+  doubles as the "getting serious" costume turn, so escalation reads on screen.
 
 ---
 
@@ -64,6 +80,8 @@ worm's-eye / whip-pan / handheld / God's-eye / puddle-reflection / slow push fre
 - Track: `music/Onslaught1.mp3` (the series track — every episode)
 - Higgsfield media_id `d48ff0d5-d756-4625-961e-7c8ed744bb2f`
 - Map the beat grid in the editor first; clips 4, 8, 10, 12 land on hits.
+- **Shot 14 is the exception: cut the music to near-silence** (low rumble only) for the
+  one-inch hold, then shot 15's punch lands ON the track's biggest hit. Silence sells the drama.
 
 ## ⚙️ EXPORT
 1920×1080 · 24 or 30fps · AI-disclosure ON · title: **RAWR LEGENDS Ep.1 — ENTER THE RAPTOR 🐉🦖**
