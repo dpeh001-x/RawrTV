@@ -1,0 +1,49 @@
+{
+  "episode": "Episode 3 — T-Rex vs Giganotosaurus (\"Size vs Bone-crusher\")",
+  "model": "seedance_2_0",
+  "settings": {
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "mode": "std",
+    "generate_audio": true,
+    "bitrate_mode": "standard"
+  },
+  "size_note": "Near-equal size — Giganotosaurus a touch longer and leaner than the T-Rex; both fully distinct.",
+  "reference_stills": {
+    "TREX_REF": {
+      "id": "2a6c7b99-c302-4b57-9b28-f5dd4e234408",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260705_075839_2a6c7b99-c302-4b57-9b28-f5dd4e234408.png"
+    },
+    "GIGA_REF": {
+      "id": "4b2199a4-f054-4a4d-aafc-f050d81d6fe8",
+      "model": "nano_banana_pro",
+      "resolution": "2k",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_021109_4b2199a4-f054-4a4d-aafc-f050d81d6fe8.png"
+    }
+  },
+  "active": [
+    { "id": "E3V1",  "act": 1, "shot": "Giga entrance — prowls out of the neon rain, blade-teeth roar; T-Rex faces off", "job_id": "f2c20124-b5b3-4fa0-88a1-3ae47d472d96", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024005_f2c20124-b5b3-4fa0-88a1-3ae47d472d96.mp4" },
+    { "id": "E3V2",  "act": 1, "shot": "Tense staredown, both lowered, circling", "job_id": "2a226bf0-a605-4fc9-a9f0-53805e15d679", "duration": 5, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024009_2a226bf0-a605-4fc9-a9f0-53805e15d679.mp4" },
+    { "id": "E3V3",  "act": 1, "shot": "Both charge — collide head-on", "job_id": "4db5dbc3-330c-4d21-8012-9830e05dc118", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024024_4db5dbc3-330c-4d21-8012-9830e05dc118.mp4" },
+    { "id": "E3V4",  "act": 2, "shot": "Slash #1 — Giga rakes blade-teeth across the T-Rex flank, blood spray", "job_id": "804b7957-2108-4c83-93e4-ab975f1331c4", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024304_804b7957-2108-4c83-93e4-ab975f1331c4.mp4" },
+    { "id": "E3V5",  "act": 2, "shot": "Slash #2 — upward slash across shoulder/neck, long gash", "job_id": "ebe5f405-0de4-4499-a9dd-f57bbcee0cb8", "duration": 5, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024538_ebe5f405-0de4-4499-a9dd-f57bbcee0cb8.mp4" },
+    { "id": "E3V6",  "act": 2, "shot": "Slash #3 (macro slow-mo) — serrated jaws slice, wound opens in neon", "job_id": "de6dc96b-5d01-4d2c-90b1-e01be03e1a41", "duration": 5, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024542_de6dc96b-5d01-4d2c-90b1-e01be03e1a41.mp4" },
+    { "id": "E3V7",  "act": 2, "shot": "Slash #4 — Giga clamps the shoulder and shakes, tearing", "job_id": "7953cf4a-abc7-484c-b041-3f6619c43e59", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024817_7953cf4a-abc7-484c-b041-3f6619c43e59.mp4" },
+    { "id": "E3V8",  "act": 2, "shot": "Slash #5 — Giga rams T-Rex back, rakes its side, slams it into a building", "job_id": "502e6263-c71a-497e-bac4-83eda9d8f206", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_024821_502e6263-c71a-497e-bac4-83eda9d8f206.mp4" },
+    { "id": "E3V9",  "act": 3, "shot": "T-Rex bone-crusher counter-bite — clamps Giga's neck/skull, head snaps", "job_id": "826362d8-041f-4784-9493-73ca117fc184", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_025115_826362d8-041f-4784-9493-73ca117fc184.mp4" },
+    { "id": "E3V10", "act": 3, "shot": "Body slam — T-Rex barrels Giga down, pins, crushing bite on the back", "job_id": "f7d3948b-8d90-41c3-8879-c70114dfaa08", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_025121_f7d3948b-8d90-41c3-8879-c70114dfaa08.mp4" },
+    { "id": "E3V11", "act": 3, "shot": "Brutal struggle — thrashing/biting through cars + storefront, dutch handheld", "job_id": "68476ecc-b854-4a0e-94f3-627b75ae45cd", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_025137_68476ecc-b854-4a0e-94f3-627b75ae45cd.mp4" },
+    { "id": "E3V12", "act": 3, "shot": "Tumble — roll together in a tangle of jaws/limbs through debris", "job_id": "4dd675a5-f2ed-4128-87fb-28cbf25a028c", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_025659_4dd675a5-f2ed-4128-87fb-28cbf25a028c.mp4" },
+    { "id": "E3V13", "act": 3, "shot": "Thrash-off — T-Rex neck-thrashes Giga off, hurls it back, both bleeding", "job_id": "a4a645d0-f1c9-4011-b8b1-d4da87cfc87e", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_025703_a4a645d0-f1c9-4011-b8b1-d4da87cfc87e.mp4" },
+    { "id": "E3V20", "act": 3, "shot": "Close-up — battered T-Rex heaves itself up out of the rubble, pained snarl (continues from E3V8)", "src": "E3V8 last frame", "job_id": "734ecfcf-383a-4812-b8e6-00bc03a42601", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260709_113145_734ecfcf-383a-4812-b8e6-00bc03a42601.mp4" },
+    { "id": "E3V21", "act": 3, "shot": "T-Rex counter-attack — clamps Giga's neck, drives it sideways, then push-in to extreme close-up of the bloody bite (continues from E3V12)", "src": "E3V12 last frame", "job_id": "2b2357c8-92be-45d8-b7b2-7a446ce41c43", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260709_113215_2b2357c8-92be-45d8-b7b2-7a446ce41c43.mp4" },
+    { "id": "E3V14", "act": 4, "shot": "Bloodied circling — wary, breathing hard, flooded neon intersection", "job_id": "5747ca4f-9c3b-432a-ba7b-c9586326474a", "duration": 5, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_025940_5747ca4f-9c3b-432a-ba7b-c9586326474a.mp4" },
+    { "id": "E3V15", "act": 4, "shot": "Roar-off — rear up, roar in each other's faces amid blood/rain/neon", "job_id": "c41005bd-e7df-4b4c-82c5-604e7bbade60", "duration": 5, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_030217_c41005bd-e7df-4b4c-82c5-604e7bbade60.mp4" },
+    { "id": "E3V22", "act": 4, "shot": "Intense bite-attack exchange — savage flurry of lunging bites that crashes them into the head-to-head lock (ends on E3V16's first frame)", "src": "end_image = E3V16 first frame", "job_id": "340030f5-2476-4aec-9ba4-dcbe77383386", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260709_115651_340030f5-2476-4aec-9ba4-dcbe77383386.mp4" },
+    { "id": "E3V16", "act": 4, "shot": "FINALE — struggling deadlock in a destroyed neon city, cliffhanger hold", "job_id": "135b9cd6-c6bc-48d8-a7e8-a0cc09c2c278", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_030223_135b9cd6-c6bc-48d8-a7e8-a0cc09c2c278.mp4" },
+    { "id": "E3V17", "act": 0, "shot": "Cinematic charge #1 — low centered speed shot, both beasts sprint from opposite ends toward camera, spray blasting the lens", "job_id": "ed00ad2b-ca17-44d1-8dde-b400f113d881", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_083013_ed00ad2b-ca17-44d1-8dde-b400f113d881.mp4" },
+    { "id": "E3V18", "act": 0, "shot": "Cinematic charge #2 — high aerial descending drone shot, both charge from opposite ends on a collision course", "job_id": "ed30d883-56a7-4104-a4bc-422173fc0834", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_083040_ed30d883-56a7-4104-a4bc-422173fc0834.mp4" },
+    { "id": "E3V19", "act": 0, "shot": "INCREDIBLY GRAND T-Rex entrance — cranes up from street, emerges from neon smoke + lightning, strides forward, thunderous roar", "job_id": "357dc9e4-1c41-4a17-b933-fc0fe32f7642", "duration": 6, "audio": true, "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/hf_20260707_083056_357dc9e4-1c41-4a17-b933-fc0fe32f7642.mp4" }
+  ],
+  "archive": []
+}
