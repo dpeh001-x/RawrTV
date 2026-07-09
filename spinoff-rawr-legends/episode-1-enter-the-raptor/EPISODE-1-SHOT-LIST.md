@@ -16,7 +16,9 @@
 | S4 · Key art / title card | grand-intro title drop: "ENTER THE RAPTOR" | nano_banana_pro | `752887f7-49d0-4181-91ec-361902e5f146`, `358a3dde-563f-4885-89d0-7f4aa417591c` |
 
 All 8 variants are saved in `/stills`. **Winners picked:**
-- **S1 → `S1-dragon-b.png`** (job `5884ed07`) — full jumpsuit + black belt, claw-scratched chest, rain. (variant `a` had chest artifacts, keep as reference only)
+- **S1 → `S1-dragon-e.png`** (job `1d7acb72`, nano_banana_pro) — **true-likeness pass**: full jumpsuit, claw-scratched chest, coiled stance in the rain. THE hero reference for all clips.
+  - `S1-dragon-f.png` (job `9d342be0`) — jumpsuit stripped to the waist, battle-damaged: use as the Act III mid-fight look (shots 9–12).
+  - `S1-dragon-c/d.png` (soul_2 likeness pass) + `a/b` (first pass) — alternates/reference only.
 - **S2 → `S2-raptor-b.png`** (job `f4003eac`) — snarling jaw, amber eye, neon steam. (`a` = clean side profile, use as secondary angle reference)
 - **S3 → `S3-arena-a.png`** (job `293ff1a6`) — symmetrical raised ring, giant neon dragon, lanterns, skyline. (`b` = elevated alt angle, usable for shot 10's God's-eye)
 - **S4 → `S4-keyart-b.png`** (job `358a3dde`) — brush-style ENTER THE RAPTOR type, cyan-glow Dragon vs pink-glow Raptor. This is the title drop AND the YouTube thumbnail.
