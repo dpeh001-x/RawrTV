@@ -60,6 +60,12 @@ size note is pasted into every two-character prompt.
 | E3V12 | Tumble — roll together in a tangle of jaws/limbs through debris | both | 6s |
 | E3V13 | Thrash-off — T-Rex neck-thrashes Giga off, hurls it back, both bleeding | both | 6s |
 
+**Frame-linked continuity add-ons (round 3, extend-from-last-frame):**
+| Clip | Shot | continues from | dur |
+|------|------|----------------|-----|
+| E3V20 | Close-up — battered T-Rex heaves itself up out of the rubble, pained snarl | E3V8 last frame | 6s |
+| E3V21 | T-Rex counter-attack — clamps Giga's neck, then push-in to an extreme close-up of the bloody bite | E3V12 last frame | 6s |
+
 ### ACT 4 — Deadlock finale (cliffhanger)
 | Clip | Shot | refs | dur |
 |------|------|------|-----|
