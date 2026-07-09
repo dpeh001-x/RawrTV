@@ -27,13 +27,18 @@ Reference the winner's **job_id** as the start-frame in every video generation b
 
 ---
 
-## 🎥 THE CLIPS — 17 shots, 17 UNIQUE ANGLES (the non-repeating rule)
+## 🎥 THE CLIPS — 23 shots, 23 UNIQUE ANGLES (the non-repeating rule)
 
 Cut on the Onslaught1 beat grid. Angles never repeat — that's the series signature.
 
-**Fight logic:** the Raptor wins the first half. Its sneaky claw attack draws FIRST BLOOD —
-that wound is what makes the Dragon pull the nunchaku. Escalation:
-**raptor slashes → first blood → nunchaku combos → flying kick → raptor's finisher attempt → one-inch punch counter.**
+**Fight logic — three false endings:**
+1. Raptor wins the first half: Switchblade slashes, then the Pickpocket draws FIRST BLOOD.
+2. The Dragon answers: bare-hand flurry → flying kick → the ONE-INCH PUNCH launches the
+   raptor through the ropes. *Looks over.* It isn't.
+3. The raptor rises and its GUILLOTINE finisher CONNECTS — the Dragon is down, flat on the
+   concrete, music dead. Then: the iconic kip-up somersault, the nunchaku comes out, and a
+   crazy complicated combo delivers a flurry of blows to the raptor's head until its skull
+   ridge CRACKS — **KO. The nunchaku storm is the true finale.**
 
 ### 🦖 THE RAPTOR'S MOVESET (it's a fighter, not a victim)
 | Move | What it is |
@@ -62,44 +67,62 @@ that wound is what makes the Dragon pull the nunchaku. Escalation:
 |---|---|---|---|---|
 | 8 | THE SWITCHBLADE | **Whip-pan following each slash** | S2 + S1-e | raptor's showy slash flurry: spinning tail-pivot into three chained sickle slashes, Dragon weaving backward on his heels, a lantern and a neon sign shredded, sparks and paper embers |
 | 9 | THE PICKPOCKET — first blood | **Low lateral dolly slide at waist height, speed-ramped** | S2 + S1-e | the sneaky one: tail whips HIGH at his face — he blocks it — hidden foot-claw rakes LOW across his chest, three red lines through the yellow suit. He staggers back, touches the wound, looks at his hand. The raptor does a taunting little strut |
-| 10 | Nunchaku reveal | **Rack focus: raptor's snapping jaws foreground → Dragon behind** | S1-f | jaws snarl in blurred foreground; focus snaps to the wounded Dragon stripping the torn jumpsuit to his waist and pulling nunchaku from his belt, one slow warm-up spin, eyes locked. NOW it's personal |
+| 10 | The turn | **Rack focus: raptor's snapping jaws foreground → Dragon behind** | S1-f | jaws snarl in blurred foreground; focus snaps to the wounded Dragon stripping the torn jumpsuit to his waist, rolling his neck, sliding into stance and beckoning with two fingers. NOW it's personal |
 
-### ACT III-B — THE DRAGON'S ANSWER (~0:40–0:50)
+### ACT III-B — THE DRAGON'S ANSWER → FALSE ENDING #1 (~0:40–0:52)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
 |---|---|---|---|---|
-| 11 | THE CRAZY COMBO | **180° orbiting arc shot, speed-ramped** | S1-f | camera circles him as the nunchaku blurs: double figure-8s, behind-the-back pass, under-the-arm catch, neck wrap and re-draw — rain whipping off the chains in spirals, neon streaks smearing |
-| 12 | Combo connects | **Handheld shaky close, inside the fight** | S1-f + S2 | end of the combo cracks across the raptor's jaw mid-lunge, spit and rain flying, raptor staggers sideways |
-| 13 | THE FLYING KICK | **Top-down overhead (God's-eye)** | S3-b + both | Dragon launches — full flying side-kick connects square in the ribs, raptor skids across the wet ring through neon reflections, lanterns scatter |
+| 11 | Bare-hand flurry | **Handheld shaky close, inside the fight** | S1-f + S2 | Jeet Kune Do straight-blast chain punches and trapping hands against snapping jaws, a backfist snaps the raptor's snout sideways, rain flying off every impact |
+| 12 | THE FLYING KICK | **Top-down overhead (God's-eye)** | S3-b + both | Dragon launches — full flying side-kick connects square in the ribs, raptor skids across the wet ring through neon reflections, lanterns scatter |
+| 13 | One inch | **Locked-off macro insert, extreme close-up** | S1-f | music ducks for a breath: his open palm settles ONE INCH from the staggered raptor's heaving chest scales, fingers slowly curl into a fist, a single raindrop rolls off his knuckle |
+| 14 | THE ONE-INCH PUNCH | **Fist-level side profile, ultra-slow-mo (1000fps feel), speed-ramp** | S1-f + S2 | the fist travels one inch — a shockwave ring of mist explodes off the raptor's chest, rain hangs suspended, the raptor is LAUNCHED through the lantern ropes and lies still in the wreckage. *It looks over.* |
 
-### ACT III-C — THE RAPTOR'S FINISHER vs THE ONE-INCH PUNCH (~0:50–1:05)
+### ACT III-C — THE DEVASTATION → THE DRAGON GOES DOWN (~0:52–1:02)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
 |---|---|---|---|---|
-| 14 | The climb | **Reflection shot: action in a puddle, then tilt up** | S2 + S3-a | the raptor rises, shakes off rain, screams — then springs onto the corner structure above the ring, coiling low against the neon dragon sign. It's setting something up |
-| 15 | THE GUILLOTINE | **Dragon's POV — the dive comes AT CAMERA** | S2 | the raptor launches into its claws-first death-dive straight at the lens, sickle claws leading, backlit by lightning — at the last frame the view slips sideways: the dive MISSES, the raptor crashes through the lantern ropes, dazed |
-| 16 | One inch | **Locked-off macro insert, extreme close-up** | S1-f | DEAD SILENCE beat: his open palm settles ONE INCH from the dazed raptor's heaving chest scales, fingers slowly curl into a fist, a single raindrop rolls off his knuckle — hold it, let the audience lean in |
-| 17 | THE PUNCH | **Fist-level side profile, ultra-slow-mo (1000fps feel), speed-ramp** | S1-f + S2 | the fist travels one inch — a shockwave ring of mist explodes off the raptor's chest, rain hangs suspended, the raptor is LAUNCHED across the ring through the lantern ropes; ramp to real-time on the landing, freeze on the Dragon's follow-through, film-burn to the RAWR LEGENDS end card |
+| 15 | It rises | **Reflection shot: action in a puddle, then tilt up** | S2 + S3-a | the Dragon turns his back to walk away — behind him the puddle reflection shows the raptor RISING out of the lantern wreckage; tilt up as it screams and springs onto the corner structure by the neon dragon sign |
+| 16 | THE GUILLOTINE CONNECTS | **Dragon's POV — the dive comes AT CAMERA** | S2 | the raptor launches its claws-first death-dive straight at the lens, sickle claws leading, backlit by lightning — this time it HITS. Impact fills the frame, whiteout to black |
+| 17 | Down | **Ground-level dutch: his face on the concrete in foreground, raptor blurred behind** | S1-f + S2 | the Dragon lies flat on the wet concrete, cheek against the ground, fresh cuts, rain falling on his face, eyes closed. In the blurred background the raptor struts a slow victory lap. **MUSIC DEAD — only rain and distant neon buzz** |
+
+### ACT III-D — THE COMEBACK: KIP-UP + NUNCHAKU KO — THE TRUE FINALE (~1:02–1:20)
+| # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
+|---|---|---|---|---|
+| 18 | THE KIP-UP | **Vertical crane boom-up, rising with him** | S1-f | his eyes SNAP open on the concrete — legs whip skyward and he somersaults up in the iconic no-hands kip-up, landing coiled in stance in one motion; the camera rises with his body. **Onslaught1 slams back in the instant his feet plant** |
+| 19 | The draw | **Vertical whip-tilt: belt → hands → eyes** | S1-f | whip-tilt up his body as the nunchaku drops from his belt into his palm, chain snapped taut between both fists at chest height, his eyes burning over the top of it, water shaking off the wood |
+| 20 | THE CRAZY COMBO (wind-up) | **180° orbiting arc shot, speed-ramped** | S1-f | camera circles as the nunchaku blurs into the craziest combination: double figure-8s, behind-the-back pass, under-the-arm catch, neck wrap and re-draw, hand-to-hand switches — and he's WALKING TOWARD the raptor the entire time, rain spiraling off the chains |
+| 21 | THE FLURRY | **Locked frontal medium, rhythmic strobe speed-ramps** | S1-f + S2 | blow after blow to the raptor's head — left, right, up under the jaw — every strike landing ON a beat of the track, the head snapping side to side, it can't bite through the blur, legs wobbling |
+| 22 | THE CRACK | **Bullet-time frozen-moment 90° sweep** | S2 | the final overhead strike lands dead on the crown — time freezes mid-impact and the camera sweeps around it: a visible fracture splitting across the raptor's skull ridge, one pupil blown wide, rain suspended — then time releases and its legs buckle |
+| 23 | KO + end card | **Slow push-in to hero freeze-frame, film-burn** | S1-f + S2 | the raptor face-plants into a puddle, OUT COLD, tongue lolling. The Dragon stands over it chest heaving, spins the nunchaku once, tucks it away, thumbs his nose with a flick. Freeze on that frame, film grain burns out → RAWR LEGENDS end card |
 
 **Angle audit ✓** 1 drone push / 2 low track behind / 3 dutch ECU / 4 crash-zoom out / 5 locked
 symmetrical wide / 6 over-shoulder / 7 worm's-eye / 8 whip-pan / 9 low lateral dolly slide /
-10 rack focus / 11 orbiting arc / 12 handheld / 13 God's-eye / 14 puddle-reflection tilt-up /
-15 POV dive-at-camera / 16 locked macro insert / 17 fist-level slow-mo profile. **17 shots, zero repeats.**
+10 rack focus / 11 handheld / 12 God's-eye / 13 locked macro insert / 14 fist-level slow-mo
+profile / 15 puddle-reflection tilt-up / 16 POV dive-at-camera / 17 ground-level dutch
+foreground-background / 18 crane boom-up / 19 vertical whip-tilt / 20 orbiting arc / 21 locked
+frontal strobe-ramp / 22 bullet-time sweep / 23 slow push-in freeze. **23 shots, zero repeats.**
 
 ### Wardrobe + wound continuity 👕🩸
 - Shots 1–9: full jumpsuit (**S1-e**), chest clean until shot 9.
 - **Shot 9 CREATES the chest scratches** — the Pickpocket's rake is where the claw marks
   seen in the hero stills come from.
-- Shots 10–17: jumpsuit stripped to the waist, scratched chest (**S1-f**) — the costume turn
-  is motivated by the wound, so the escalation reads on screen.
+- Shots 10–23: jumpsuit stripped to the waist, scratched chest (**S1-f**); shot 17 adds
+  fresh cuts from the Guillotine — he should look progressively wrecked by the finale.
+- The nunchaku stays UNSEEN until shot 19. The kip-up → draw → storm is one continuous
+  crescendo; don't tease the weapon earlier or the finale deflates.
 
 ---
 
 ## 🎵 MUSIC SYNC
 - Track: `music/Onslaught1.mp3` (the series track — every episode)
 - Higgsfield media_id `d48ff0d5-d756-4625-961e-7c8ed744bb2f`
-- Map the beat grid in the editor first; clips 4, 8, 11, 13, 15 land on hits
+- Map the beat grid in the editor first; clips 4, 8, 12, 14 land on hits
   (shot 9's claw rake lands just OFF the beat — sneak attacks shouldn't be telegraphed by the music).
-- **Shot 16 is the exception: cut the music to near-silence** (low rumble only) for the
-  one-inch hold, then shot 17's punch lands ON the track's biggest hit. Silence sells the drama.
+- Shot 13 (one-inch hold): quick half-second duck, then shot 14's punch lands on a big hit.
+- **Shots 16–17 = FULL music dropout.** The Guillotine impact kills the track; over shot 17
+  it's only rain and neon buzz. The silence makes the knockdown feel final.
+- **Shot 18 (the kip-up) restarts Onslaught1 the frame his feet plant** — the comeback and
+  the track come back together. Shot 21's flurry lands strike-per-beat; shot 22's skull-crack
+  is the track's single biggest hit; shot 23 rides the tail-out to the freeze.
 
 ## ⚙️ EXPORT
 1920×1080 · 24 or 30fps · AI-disclosure ON · title: **RAWR LEGENDS Ep.1 — ENTER THE RAPTOR 🐉🦖**
