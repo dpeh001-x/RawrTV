@@ -21,6 +21,10 @@ Everything planned so far, organized. Start here.
 - **/overlays** — 13 ready-to-drop 1080×1920 transparent PNGs (nameplates, stat cards, VS/FIGHT cards, 4 health-bar states, winner + rematch cards, LIVE bug).
 - **/claudecode** — `generate_episode1.py` + `README.md` to generate all 8 clips via the Higgsfield API with your own key.
 
+### `/spinoff-rawr-legends`  ← the 16:9 cinematic spinoff
+- **RAWR-LEGENDS-spinoff-bible.md** — spinoff format: legendary fighter vs. prehistoric predator, widescreen, one signature track ("Onslaught1") on every episode, non-repeating camera angles, grand cold-open intro.
+- **/episode-1-enter-the-raptor** — "ENTER THE RAPTOR" (The Dragon vs. The Raptor): shot list with 12 unique angles, hero stills (generated), and the series music track.
+
 ### `/archive`
 - Early "facts channel" material (RAWR MATERIAL era) — superseded by the fights concept, kept for reference.
 
