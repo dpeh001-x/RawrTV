@@ -18,6 +18,14 @@ recoil, and grounded gravity in every clip (see the bible's Physics + Scale rule
 | S3 · The Arena (empty set) | location: rooftop arena, neon dragon sign, lanterns | nano_banana_pro | `293ff1a6-7e57-49aa-a330-fc8fd0eabf52`, `803736f5-1ae9-4948-9e55-96a94966d4c4` |
 | S4 · Key art / title card | grand-intro title drop: "ENTER THE RAPTOR" | nano_banana_pro | `752887f7-49d0-4181-91ec-361902e5f146`, `358a3dde-563f-4885-89d0-7f4aa417591c` |
 
+### ✅ FINAL CUT — LOCKED BY CLIENT
+| Slot | Winner | File |
+|---|---|---|
+| Dragon | **E** | `S1-dragon-e.png` |
+| Raptor | **B** | `S2-raptor-b.png` |
+| Arena | **A** | `S3-arena-a.png` |
+| Key Art | **B (corrected)** | `S4-keyart-b2.png` — text fixed: top line now **RAWR FIGHTS**, **EPISODE 1 removed** (job `e156926e`, edited from the original B) |
+
 All 8 variants are saved in `/stills`. **Winners picked:**
 - **S1 → `S1-dragon-e.png`** (job `1d7acb72`, nano_banana_pro) — **true-likeness pass**: full jumpsuit, claw-scratched chest, coiled stance in the rain. THE hero reference for all clips.
   - `S1-dragon-f.png` (job `9d342be0`) — jumpsuit stripped to the waist, battle-damaged: use as the Act III mid-fight look (shots 9–12).
@@ -25,7 +33,7 @@ All 8 variants are saved in `/stills`. **Winners picked:**
 - **S2 → `S2-raptor-b.png`** (job `f4003eac`) — snarling jaw, amber eye, neon steam. (`a` = clean side profile, use as secondary angle reference)
   - ⚠️ **Scale note:** S2 was generated as a solo portrait described "~6 ft" — fine as a *look* reference (no size cue in-frame), but every **two-shot** clip must prompt the locked relationship (**raptor slightly SHORTER than the Dragon**). If any two-shot renders the raptor towering, regenerate that clip; the still itself does not need redoing.
 - **S3 → `S3-arena-a.png`** (job `293ff1a6`) — symmetrical raised ring, giant neon dragon, lanterns, skyline. (`b` = elevated alt angle, usable for shot 10's God's-eye)
-- **S4 → `S4-keyart-b.png`** (job `358a3dde`) — brush-style ENTER THE RAPTOR type, cyan-glow Dragon vs pink-glow Raptor. This is the title drop AND the YouTube thumbnail.
+- **S4 → `S4-keyart-b2.png`** (job `e156926e`) — the **corrected** title card: top line **RAWR FIGHTS**, no episode line. This is the title drop AND the YouTube thumbnail. (`S4-keyart-b.png` is the original, superseded — still said "RAWR LEGENDS / EPISODE 1".)
 
 Reference the winner's **job_id** as the start-frame in every video generation below.
 
