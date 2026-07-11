@@ -1,0 +1,90 @@
+# 🐉 RAWR FIGHTS: CINEMATIC — SERIES BIBLE
+### Icons of combat vs. prehistoric killers · the widescreen RAWR FIGHTS line · a Moji Studios joint
+
+RAWR FIGHTS has two lines under one brand:
+- **RAWR FIGHTS (shorts):** dino-vs-dino, vertical, fight-night chaos.
+- **RAWR FIGHTS: CINEMATIC (this):** one legendary human fighter vs. one prehistoric
+  predator, shot like a *movie* — widescreen, cinematic, grand. Same brand, same logo, big-screen format.
+
+---
+
+## 🎬 FORMAT (the CINEMATIC line vs. the shorts line)
+
+| | RAWR FIGHTS (shorts) | RAWR FIGHTS: CINEMATIC (this) |
+|---|---|---|
+| Aspect | 9:16 vertical, 1080×1920 | **16:9 widescreen, 1920×1080** |
+| Vibe | fight-night hype, overlays everywhere | cinematic grindhouse-meets-A24 |
+| Music | licensed phonk per episode | **ONE signature track: "Dead Meat"** on every episode |
+| Camera | fast cuts, repeatable templates | **every shot = a NEW angle. No angle repeats. Ever.** |
+| Combat | stylized kaiju smashing | **realistic physics — weight, momentum, real martial arts** |
+| Platform | Shorts / TikTok / Reels | YouTube main feed (long-form-lite, 60–90s) |
+
+### THE NON-REPEATING ANGLE RULE 🎥
+The visual signature of the CINEMATIC line: across an entire episode, **no two shots share a
+camera setup**. Every cut is a fresh angle — drone top-down, worm's-eye, dutch tilt,
+over-shoulder, crash-zoom, whip-pan, reflection shot, POV. The shot list in each
+episode folder assigns one unique angle per clip; check them off as you generate.
+
+### REALISTIC PHYSICS RULE ⚖️
+This line sells *believable* combat, not cartoon kaiju smashing. Every generation prompt and
+every edit choice honors real physics:
+- **Weight & momentum** — bodies have mass. A flying kick carries the Dragon's full bodyweight;
+  the raptor's lunge commits its whole frame and it has to *recover* from a miss.
+- **Grounded gravity** — no floaty hang-time; jumps arc and fall at real speed (slow-mo is a
+  deliberate ramp, not weightlessness).
+- **Action = reaction** — every strike has visible recoil, skid, splash, and follow-through.
+  Rain, mud, and neon puddles react to impacts.
+- **Real martial arts** — the Dragon's moves are actual Jeet Kune Do / nunchaku technique, not
+  invented wire-fu. The raptor moves like a real predatory theropod: bird-like, twitchy, using
+  tail for balance and counter-weight.
+
+### SCALE SPEC 📏 (locked for consistency across every clip)
+- **The Dragon:** ~1.7 m (5'7"), lean ~64 kg — human fighter proportions.
+- **The Raptor:** **slightly smaller than the Dragon** — ~1.5 m tall in its upright lunge, lower
+  at the hip when crouched, roughly Dragon's bodyweight or a touch less. This is close to a *real*
+  Velociraptor's build (a big feathered-ish predator, not a movie-scaled monster). The size parity
+  is what makes the fight a real duel — the raptor wins on claws, teeth, and speed; the Dragon
+  wins on technique and reach with the nunchaku. **Never render it towering over him.**
+
+### THE GRAND INTRODUCTION 🏮
+Every episode opens with a ~15-second cinematic cold-open before any fighting:
+1. **The Set** — slow establishing push into the empty arena (angle #1)
+2. **The Legend's entrance** — hero walk-out, rim-lit, slow-mo (angle #2)
+3. **The Monster's reveal** — predator emerges from shadow/steam (angle #3)
+4. **The Title drop** — key-art title card slams in ON THE BEAT of Dead Meat's first hit
+
+---
+
+## 🎵 MUSIC — "DEAD MEAT" (series signature track)
+
+- **Local file:** `episode-1-enter-the-raptor/music/Dead_meat.mp3` (224 kbps, 48 kHz stereo)
+- **Higgsfield media_id:** `12c8ddb8-33cf-4b11-a7af-ea5454a300bb` (uploaded + confirmed — reusable as an audio reference in any Higgsfield job)
+- **Higgsfield CDN URL:** `https://d2ol7oe51mr4n9.cloudfront.net/user_3G4EKe8Vr9E2YlQd0Ypng9D9FlM/12c8ddb8-33cf-4b11-a7af-ea5454a300bb.mp3`
+- Used on **all** CINEMATIC episodes: intro build → title-drop hit → fight sections cut on the beat.
+- Same track every episode = sonic branding. People should hear 2 seconds and know it's RAWR FIGHTS: CINEMATIC.
+
+---
+
+## 🥋 EPISODE 1 — "ENTER THE RAPTOR"
+**The Dragon vs. The Raptor.** See `/episode-1-enter-the-raptor`.
+
+⚖️ **Likeness note:** the hero is **"The Dragon,"** styled as a Bruce Lee homage
+(yellow jumpsuit, black side stripes, bowl cut, claw-scratched chest). Bruce Lee's
+name/likeness is estate-protected (Bruce Lee Enterprises) and platforms flag deepfake-adjacent
+content, so for anything published, keep the character name "The Dragon" and treat the look as
+homage — that keeps every episode publishable and monetizable.
+
+### Future matchup bench (same rules: homage archetypes, realistic scale/physics)
+- Ep 2: The Samurai vs. Utahraptor — "BLADE vs. BLADE"
+- Ep 3: The Gladiator vs. Smilodon — "ARENA RULES"
+- Ep 4: The Boxer vs. Terror Bird — "FOOTWORK"
+
+---
+
+## ✅ EPISODE PIPELINE (every episode)
+1. **Stills first** (Higgsfield, 16:9): Legend hero still, Monster hero still, empty arena set, versus key art. These lock character/set/scale consistency.
+2. **Clips** (Higgsfield image-to-video, 16:9): drive every clip from the stills; assign each clip its unique angle from the shot list; hold the scale + physics rules in every prompt.
+3. **Assemble**: cut on Dead Meat's beat grid; title drop on the first big hit.
+4. **Export 1920×1080**, AI-disclosure ON, post to YouTube.
+
+*RAWR FIGHTS: CINEMATIC · EVERY ANGLE EARNED · REAL WEIGHT, REAL STAKES 🎥*

@@ -21,6 +21,10 @@ Everything planned so far, organized. Start here.
 - **/overlays** — 13 ready-to-drop 1080×1920 transparent PNGs (nameplates, stat cards, VS/FIGHT cards, 4 health-bar states, winner + rematch cards, LIVE bug).
 - **/claudecode** — `generate_episode1.py` + `README.md` to generate all 8 clips via the Higgsfield API with your own key.
 
+### `/spinoff-rawr-fights`  ← the 16:9 cinematic line of RAWR FIGHTS
+- **RAWR-FIGHTS-cinematic-bible.md** — cinematic format: legendary fighter vs. prehistoric predator, widescreen, one signature track ("Dead Meat") on every episode, non-repeating camera angles, realistic physics, real scale (raptor slightly smaller than the fighter), grand cold-open intro.
+- **/episode-1-enter-the-raptor** — "ENTER THE RAPTOR" (The Dragon vs. The Raptor): shot list with 23 unique angles, hero stills (generated), and the series music track.
+
 ### `/archive`
 - Early "facts channel" material (RAWR MATERIAL era) — superseded by the fights concept, kept for reference.
 
