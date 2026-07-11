@@ -28,7 +28,7 @@ recoil, and grounded gravity in every clip (see the bible's Physics + Scale rule
 
 All 8 variants are saved in `/stills`. **Winners picked:**
 - **S1 → `S1-dragon-e.png`** (job `1d7acb72`, nano_banana_pro) — **true-likeness pass**: full jumpsuit, claw-scratched chest, coiled stance in the rain. THE hero reference for all clips.
-  - `S1-dragon-f.png` (job `9d342be0`) — jumpsuit stripped to the waist, battle-damaged: use as the Act III mid-fight look (shots 9–12).
+  - `S1-dragon-f.png` (job `9d342be0`) — jumpsuit stripped to the waist, battle-damaged: the mid-/late-fight look (shots 10–23).
   - `S1-dragon-c/d.png` (soul_2 likeness pass) + `a/b` (first pass) — alternates/reference only.
 - **S2 → `S2-raptor-b.png`** (job `f4003eac`) — snarling jaw, amber eye, neon steam. (`a` = clean side profile, use as secondary angle reference)
   - ⚠️ **Scale note:** S2 was generated as a solo portrait described "~6 ft" — fine as a *look* reference (no size cue in-frame), but every **two-shot** clip must prompt the locked relationship (**raptor slightly SHORTER than the Dragon**). If any two-shot renders the raptor towering, regenerate that clip; the still itself does not need redoing.
@@ -64,17 +64,17 @@ Every clip holds the **scale lock** (raptor slightly smaller than the Dragon) an
 ### ACT I — THE GRAND INTRODUCTION (~0:00–0:15, music: intro build)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
 |---|---|---|---|---|
-| 1 | The set awakens | **Slow drone push-in, high wide, descending** | S3 | neon flickers on sign by sign, rain, steam rises, empty arena breathing |
-| 2 | The Dragon's entrance | **Low tracking shot from behind, slow-mo** | S1 | he walks through parting steam toward camera-away, knuckles crack, yellow suit glowing under neon |
-| 3 | The Raptor's reveal | **Extreme close-up, dutch tilt** | S2 | amber eye snaps open in darkness, pupil contracts, rain drips off snout, low growl |
-| 4 | Title drop | **Crash-zoom out from lightning strike** | S4 | key art slams in ON THE FIRST BIG HIT of Dead Meat |
+| 1 | The set awakens | **Slow drone push-in, high wide, descending** | S3-a | neon flickers on sign by sign, rain, steam rises, empty arena breathing |
+| 2 | The Dragon's entrance | **Low tracking shot from behind, slow-mo** | S1-e | he walks through parting steam toward camera-away, knuckles crack, yellow suit glowing under neon. Back to lens — chest not shown |
+| 3 | The Raptor's reveal | **Extreme close-up, dutch tilt** | S2-b | amber eye snaps open in darkness, pupil contracts, rain drips off snout, low growl |
+| 4 | Title drop | **Crash-zoom out from lightning strike** | S4-b2 | key art slams in ON THE FIRST BIG HIT of Dead Meat (this is a motion-graphics beat, not a fresh generation) |
 
 ### ACT II — THE STANDOFF (~0:15–0:30)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
 |---|---|---|---|---|
-| 5 | Face-off | **Symmetrical wide profile, locked-off, both in frame** | S3 + S1 + S2 | 20 feet apart, rain between them, neither moves, lanterns sway |
-| 6 | The Dragon reads him | **Over-the-Raptor's-shoulder, shallow focus** | S1 | slides into stance, beckons with fingers, iconic 'come here' gesture |
-| 7 | The Raptor circles | **Ground-level worm's-eye, wide lens distortion** | S2 | sickle claws pass inches from lens through puddle, tail whips |
+| 5 | Face-off | **Symmetrical wide profile, locked-off, both in frame** | S3-a + S1-e + S2-b | 20 feet apart, rain between them, neither moves, lanterns sway. Enforce scale: raptor reads shorter than the Dragon |
+| 6 | The Dragon reads him | **Over-the-Raptor's-shoulder, shallow focus** | S1-e | slides into stance, beckons with fingers, iconic 'come here' gesture |
+| 7 | The Raptor circles | **Ground-level worm's-eye, wide lens distortion** | S2-b | sickle claws pass inches from lens through puddle, tail whips |
 
 ### ACT III-A — THE RAPTOR'S ROUND (~0:30–0:40, music: full onslaught)
 | # | Shot | UNIQUE ANGLE | Drive from | Prompt beats |
@@ -122,7 +122,24 @@ frontal strobe-ramp / 22 bullet-time sweep / 23 slow push-in freeze. **23 shots,
 - Shots 10–23: jumpsuit stripped to the waist, scratched chest (**S1-f**); shot 17 adds
   fresh cuts from the Guillotine — he should look progressively wrecked by the finale.
 - The nunchaku stays UNSEEN until shot 19. The kip-up → draw → storm is one continuous
-  crescendo; don't tease the weapon earlier or the finale deflates.
+  crescendo; don't tease the weapon earlier or the finale deflates. (Keep a waist sash on
+  S1-f from shot 10 so shot 19's "drops from his belt" has somewhere to have come from.)
+
+### ⚠️ OPEN ITEMS — resolve before generating (from the verification pass)
+1. **Scratch continuity (biggest):** the locked hero still **S1-e already shows a claw-scratched
+   chest**, but the plan says the chest is clean until the Pickpocket rakes it in shot 9 — so shots
+   5, 6 and 8 (chest visible, pre-wound) would show the wound too early. **Recommended fix:** treat
+   S1-e's marks as the Dragon's established look and make shot 9's "first blood" a *fresh, bright,
+   bleeding* gash that reads distinctly against the older scars. (Alt: prompt shots 1–8 with the
+   suit fully zipped / chest hidden — but that fights the locked still.)
+2. **Angle near-repeat:** shot 20 (180° orbiting arc) and shot 22 (bullet-time 90° sweep) are both
+   circling moves only one shot apart in the finale — the closest thing to a repeat in the episode.
+   **Recommended fix:** make 22 a *low, tight micro-orbit locked on the skull* (or a straight snap-in
+   freeze) so it doesn't echo 20's wide body-orbit.
+3. **Physics vs. launches:** the "realistic physics" rule and the big launches (one-inch punch sends
+   the raptor through the ropes; kick skids it across the ring) pull against each other at ~scale
+   parity. **Recommended read:** "cinematic realism" — keep the launches but sell them with real
+   weight (raptor tumbles/rolls with momentum, no floaty hang-time), not documentary realism.
 
 ---
 
